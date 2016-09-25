@@ -1,0 +1,65 @@
+%%	build-queue:
+%%	
+%%	xelatex
+%%	makeglossaries
+%%	makeindex
+%%	xelatex
+%%	bibtex
+%%	xelatex
+%%	xelatex
+%%	
+
+\RequirePackage[l2tabu,orthodox]{nag}
+\documentclass[10pt,a4paper,titlepage,twoside,german]{zhawreprt}
+
+\include{packages}
+\if false
+\include{glossaryentries}
+\fi
+
+\logofilename{images/logos/SoE/de/de-soe-cmyk.png}
+\projecttype{PA}
+\major{HS16 Studiengang Informatik}
+\title{Pflichtenheft Spaghetti}
+\shorttitle{Pflichtenheft Spaghetti}
+\author{Raphael Emberger}
+\authors{Raphael Emberger, Kal-El,\\Musashi Miyamoto}
+\mainreferee{}
+\referee{}
+\industrypartner{}
+\extreferee{}
+\setdate{\today}
+
+\newcommand{\AddRequirement}[3]{
+\textbf{#1/#2/ - #3:}
+}
+\newcommand{\AddFRequirement}[2]{
+\AddRequirement{F}{#1}{#2}
+}
+\newcommand{\AddNonFRequirement}[2]{
+\AddRequirement{R}{#1}{#2}
+}
+\newcommand{\AddTestRequirement}[2]{
+\AddRequirement{T}{#1}{#2}
+}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\chapter{Einleitung}\label{chp:Introduction}
+\chapter{Zielbestimmungen}\label{chp:DefinitionOfGoals}
+\section{Musskriterien}\label{sec:MustCriteria}
+\section{Wunschkriterien}\label{sec:WishCriteria}
+\section{Abgrenzungskriterien}\label{sec:DistinctionCriteria}
+\chapter{Produkteinsatz}\label{chp:ProductApplication}
+\section{Anwendungsbereiche}\label{sec:FieldOfApplience}
+\section{Benutzergruppen des Produktes}\label{sec:TargetAudience}
+\chapter{Funktionale Anforderungen}\label{chp:FunctionalRequirements}
+\chapter{Funktionsbaum}\label{chp:FunctionTree}
+\chapter{Nicht-Funktionale Anforderungen}\label{chp:NonFunctionalRequirements}
+\chapter{Abnahmekriterien Anforderungen}\label{chp:TestRequirements}
+\chapter{Verzeichnisse}\label{chp:Index}
+\printglossary\label{sec:Glossar}
+\newpage
+\bibliography{reference}\label{sec:Bibliography}
+\end{document}
