@@ -1,0 +1,66 @@
+%%	build-queue:
+%%	
+%%	xelatex
+%%	makeglossaries
+%%	makeindex
+%%	xelatex
+%%	bibtex
+%%	xelatex
+%%	xelatex
+%%	
+
+\RequirePackage[l2tabu,orthodox]{nag}
+\documentclass[10pt,a4paper,titlepage,twoside,german]{zhawreprt}
+
+\include{packages}
+\if false
+\include{glossaryentries}
+\fi
+
+\include{zhawSetup}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\chapter{Ziel}\label{chp:Objective}
+\notes{\item Ziel der Webseite(z.B. Information, Spass, Lernplattform, Chatroom, Werbung)}
+\chapter{Produkteinsatz}\label{chp:FieldOfApplience}
+\notes{
+\item Anwendungsbereich(z.B. kommerzielle Nutzung, private Nutzung)
+\item Zielgruppen der Webseite(z.B. Alter, Geschlecht, Region etc.;z.B. Studierende aller Fachhochschulen in der Schweiz, Studierende der ZHAW, Studierende der School of Engineering, Studierende einer Klasse)
+}
+\chapter{Produktfunktionen}\label{chp:ProductFunctions}
+\notes{
+\item Nennung der wichtigsten Arbeitsabläufe, die mit der Webseite durchgeführt werden können
+\item Weitere Ideen/Abgrenzungen(was kann die erste Version noch nicht; was wären weitere Funktionen für nächste Versionen etc.)
+}
+\chapter{Gruppenvorkenntnisse}\label{chp:KnowHow}
+\begin{table}[h!]\label{tbl:KnowHow}
+\begin{center}
+\begin{tabular}{|r|l|}
+\hline
+\textbf{Name} & \textbf{Vorkenntnisse}\\\hline\hline
+Raphael Emberger &
+\parbox[t]{11cm}{Ausbildung: Konstrukteur(2+ Jahre)\\
+Programmiererfahrung: Autodidaktisch seit 2012\\
+Programmierkenntnisse: \emph{VB.NET}, \emph{C\#}, \emph{VBA}, \emph{VBScript}, \emph{Matlab}, \emph{Lua}, \emph{C}, \emph{C++}\\
+Webtechnologiekenntnisse: relativ erfahren\\
+Projekterfahrung: An Maschinenbau-Projekten(Studium, Industrie) mitgearbeitet oder geleitet.}\\
+\hline
+\end{tabular}\caption{Grundvorkenntnisse}
+\end{center}
+\end{table}
+\notes{
+\item Beschreiben Sie Ihren Hintergrund (Ausbildung, Berufserfahrung), Programmiererfahrung(zeitlich und inhaltlich), Erfahrung bezüglich Webtechnologien(zeitlich und inhaltlich) und Projekterfahrung(zeitlich, Umfang, Methodik, Rolle im Team).
+\item Diese Angaben verlangen wir individuell für jedes einzelne Gruppenmitglied. Sie sind wichtig, um abschätzen zu können, ob die Umsetzung Ihrer Projektidee realistisch ist.
+}
+\chapter{Anhang: Dokumentation Brainstorming}\label{chp:AppendixBrainstorming}
+\notes{
+\item Liste der fünf wichtigsten „Ideengruppen“ mit ein bis zwei erklärenden Sätzen pro „Ideengruppe“
+\item Fünf Bewertungskriterien (Tabelle mit Kriterien, Skala pro Kriterium, erklärendem Satz pro Kriterium, allfälligen Gewichtungen, Begründungen der Gewichtungen)
+\item Übersicht Bewertung der Projektideen (Tabelle, ohne Kommentare)
+}
+\end{document}
