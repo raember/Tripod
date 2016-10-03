@@ -9,9 +9,13 @@
 %%	
 
 \RequirePackage[l2tabu,orthodox]{nag}
-\documentclass[10pt,a4paper,titlepage,twoside,german]{zhawreprt}
+\documentclass[10pt,a4paper,titlepage,twoside,german,final]{zhawreprt}
 
 \include{packages}
+\usepackage{adjustbox}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{multirow}
 \if false
 \include{glossaryentries}
 \fi
@@ -81,6 +85,54 @@ Julian Visser &
 \item Diese Angaben verlangen wir individuell für jedes einzelne Gruppenmitglied. Sie sind wichtig, um abschätzen zu können, ob die Umsetzung Ihrer Projektidee realistisch ist.
 }
 \chapter{Anhang: Dokumentation Brainstorming}\label{chp:AppendixBrainstorming}
+Die Ideen wurden in drei Gruppen unterteilt:
+\begin{itemize}
+\item Spiele\\
+Spiele, die alleine, zu zweit oder mit mehreren Personen gespielt werden können.
+\item Information\\
+Applikationen, die spezifische Informationen liefern. Grappler, Filter, etc.
+\item Sonstiges\\
+Exoten, wie Simulatoren.
+\end{itemize}
+Die beim Brianstorming gesammelten Ideen wurden tabellarisiert, anhand von Kriterien bewertet und ihren kriteriumsspezifisch gewichteten Gesamtwert berechnet.
+\begin{itemize}
+\item Know-How\\
+Der Wissensstand der Mitglieder bezüglich der Idee.\\
+Wird mit 2 gewichtet, da das Wissen um den Sachverhalt massgebend ist.
+\item Interesse\\
+Wie gross ist das Interesse, die Idee umzusetzen.\\
+Das Interesse wurde als wichtigstes Kriterium auserkoren(Gewichtung: 3), da die Motivation unter fehlendem Interesse leiden würde.
+\item Umsetzbarkeit\\
+Ist der Umfang des Programmes zumutbar?\\
+Da es unerwünscht ist, das Projekt nicht beenden zu können, wird diese Kategorie mit 2 gewichtet.
+\item Erweiterbarkeit\\
+Existiert die Möglichkeit eines Ausbaus der Applikation?\\
+Die Erweiterbarkeit wäre "nice-to-have" und wird deshalb mit 1 gewichtet.
+\item Originalität\\
+Gibt es schon viele ähnliche Lösungen?\\
+Ob es bereits Lösungen dazu gibt, ist nicht von grossem Interesse. Der Lernefekt ist wichtiger. Deshalb wird diese Kategorie mit 1 gewichtet.
+\end{itemize}
+Damit wurden dann alle Ideen bewertet:
+\begin{table}[!h]\centering
+\begin{tabular}{l|c|c|c|c|c|c}
+Name & \rotatebox{90}{Know-How} & \rotatebox{90}{Interesse} & \rotatebox{90}{Umsetzbarkeit} & \rotatebox{90}{Erweiterbarkeit} & \rotatebox{90}{Originalität} & $\sum$\\\hline
+Gewichtung & 2 & 3 & 2 & 1 & 1 & \\\hline\hline
+Ferienplanung & 1 & 1 & 2 & 2 & 2 & 13\\
+Aufgabenheft & 2 & 1 & 2 & 1 & 0 & 12\\
+Scripter & 1 & 1 & 2 & 2 & 1 & 12\\
+Automat & 1 & 1 & 2 & 1 & 2 & 12\\
+Flappy-Bird & 2 & 1 & 2 & 0 & -2 & 9\\
+Pong & 2 & 0 & 2 & 2 & -2 & 8\\
+Planeten-Simulation & 1 & 0 & 2 & 2 & 0 & 8\\
+Mastermind & 1 & 0 & 2 & 1 & 0 & 7\\
+Gitarrenakkord Sucher & 1 & -1 & 2 & 2 & 1 & 6\\
+Online-Budgetplaner & 1 & 0 & 2 & 1 & -2 & 5\\
+Notenübersicht & 2 & -1 & 2 & 1 & -2 & 4\\
+Evolutions-Simulator & -1 & 0 & 1 & 2 & 2 & 4\\
+ASVZ Besetzung & 1 & -1 & 1 & 0 & 0 & 1\\
+Fitness-App & -2 & -1 & 1 & 2 & -2 & -5
+\end{tabular}\caption{Ideen}\label{tbl:Ideas}
+\end{table}
 \notes{
 \item Liste der fünf wichtigsten „Ideengruppen“ mit ein bis zwei erklärenden Sätzen pro „Ideengruppe“
 \item Fünf Bewertungskriterien (Tabelle mit Kriterien, Skala pro Kriterium, erklärendem Satz pro Kriterium, allfälligen Gewichtungen, Begründungen der Gewichtungen)
