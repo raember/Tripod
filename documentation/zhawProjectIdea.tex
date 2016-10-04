@@ -1,15 +1,19 @@
 %%	build-queue:
 %%	
-%%	xelatex
-%%	makeglossaries
-%%	makeindex
-%%	bibtex
-%%	xelatex
-%%	xelatex
+%%	¦¦¦ very first run. No .ist files yet
+%%	¦¦	index, citation/bibliography or glossary changed
+%%	¦	every change apart from the above mentioned. Double run for labels and toc.
+%%	
+%%	¦¦¦xelatex
+%%	¦¦makeglossaries
+%%	¦¦makeindex
+%%	¦¦bibtex
+%%	¦xelatex
+%%	¦xelatex
 %%	
 
 \RequirePackage[l2tabu,orthodox]{nag}
-\documentclass[10pt,a4paper,titlepage,twoside,german,final]{zhawreprt}
+\documentclass[10pt,a4paper,titlepage,twoside,german]{zhawreprt}
 
 \include{packages}
 \usepackage{adjustbox}
