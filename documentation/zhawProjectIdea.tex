@@ -32,10 +32,20 @@
 
 \maketitle
 
+\makeatletter
+\renewcommand*{\sls@headbelow@linethickness}{0pt}
+\renewcommand*{\sls@footabove@linethickness}{0pt}
+\makeatother
 \tableofcontents
+\thispagestyle{nonnumbering}
 \newpage
+\setcounter{page}{1}
 \renewcommand{\thesection}{\arabic{section}}
 \renewcommand{\thetable}{\arabic{table}}
+\makeatletter
+\renewcommand*{\sls@headbelow@linethickness}{1pt}
+\renewcommand*{\sls@footabove@linethickness}{1pt}
+\makeatother
 
 \section{Ziel}\label{chp:Objective}
 Geplant ist ein "Vacation planner" - ein Ferienplaner.\\
@@ -123,6 +133,8 @@ Die Erweiterbarkeit wäre "nice-to-have" und wird deshalb mit 1 gewichtet.
 Gibt es schon viele ähnliche Lösungen?\\
 Ob es bereits Lösungen dazu gibt, ist nicht von grossem Interesse. Der Lernefekt ist wichtiger. Deshalb wird diese Kategorie mit 1 gewichtet.
 \end{itemize}
+\raggedbottom
+\pagebreak
 Damit wurden dann alle Ideen bewertet:
 \begin{table}[!h]\centering
 \begin{tabular}{l|c|c|c|c|c|c}

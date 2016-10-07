@@ -103,10 +103,10 @@
 \renewcommand\sectionmarkformat{}
 \clearpairofpagestyles
 \lohead{\includegraphics[height={\headheight-4pt}]{\thelogofilename}}
-\cohead{\leftmark}
+\cohead{}
 \rohead{\zhaw@shorttitle}
 \lehead{\includegraphics[height={\headheight-4pt}]{\thelogofilename}}
-\cehead{\leftmark}
+\cehead{}
 \rehead{\zhaw@shorttitle}
 \lofoot{}
 \cofoot{}
@@ -117,12 +117,12 @@
 \pagestyle{scrheadings}
 
 
-\newpairofpagestyles[scrheadings]{declaration}{
+\newpairofpagestyles[scrheadings]{nonnumbering}{
 \lohead{}
-\cohead{\leftmark}
+\cohead{}
 \rohead{\zhaw@shorttitle}
 \lehead{}
-\cehead{\leftmark}
+\cehead{}
 \rehead{\zhaw@shorttitle}
 \lofoot{}
 \cofoot{}
@@ -155,7 +155,7 @@
   clone=bottom.odd,
   evenpage
 ]{bottom.even}
-\AddLayersToPageStyle{declaration}{top.odd,top.even,bottom.odd,bottom.even}
+\AddLayersToPageStyle{nonnumbering}{top.odd,top.even,bottom.odd,bottom.even}
 
 
 \renewcommand*\maketitle[1][1]{%
@@ -327,7 +327,7 @@
 
 \newcommand{\makedeclarationoforiginality}{
 \newpage
-\thispagestyle{declaration}
+\thispagestyle{nonnumbering}
 \vspace*{1.6cm}
 \if@german
 \section*{Erklärung betreffend das selbstständige Verfassen einer \zhaw@Project\ an der School of Engineering}
