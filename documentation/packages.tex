@@ -239,6 +239,37 @@
 	{\if@restonecol\onecolumn\else\clearpage\fi}
 \makeatother
 
+
+\makeatletter
+\newcommand{\headfootlineon}{
+	\renewcommand*{\sls@headbelow@linethickness}{1pt}%
+	\renewcommand*{\sls@footabove@linethickness}{1pt}%
+}
+\newcommand{\headfootlineoff}{
+	\renewcommand*{\sls@headbelow@linethickness}{0pt}%
+	\renewcommand*{\sls@footabove@linethickness}{0pt}%
+}
+\renewcommand\tableofcontents{%
+	\headfootlineoff%
+    \if@twocolumn%
+      \@restonecoltrue\onecolumn%
+    \else%
+      \@restonecolfalse%
+    \fi%
+    \chapter*{\contentsname%
+        \@mkboth{%
+           \MakeUppercase\contentsname}{\MakeUppercase\contentsname}}%
+	\thispagestyle{nonnumbering}%
+    \@starttoc{toc}%
+    \if@restonecol\twocolumn\fi
+	\newpage%
+	\setcounter{page}{1}%
+	\renewcommand{\thesection}{\arabic{section}}%
+	\renewcommand{\thetable}{\arabic{table}}%
+	\headfootlineon%
+    }
+\makeatother
+
 \usepackage{varioref}
 \usepackage[colorlinks=true, linkcolor=black, citecolor=black, plainpages=false, unicode, pdfencoding=auto ,backref=page]{hyperref}
 \usepackage{cleveref}
