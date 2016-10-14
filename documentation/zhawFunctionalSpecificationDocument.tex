@@ -31,12 +31,16 @@
 \newcommand{\W}[1]{
 \AddRequirement{F2.}{#1}
 }
-\newcommand{\A}[1]{
+\newcommand{\D}[1]{
 \AddRequirement{F3.}{#1}
+}
+\newcommand{\R}[1]{
+\AddRequirement{F4.}{#1}
 }
 \newcommand{\TF}[1]{
 \AddRequirement{T.}{#1}
 }
+\newcommand{\tableheader}[2]{\multicolumn{#1}{c}{\raisebox{-0.3em}[0ex][0ex]{\large{\textbf{#2}}}}}
 
 \begin{document}
 
@@ -48,24 +52,74 @@
 Geplant ist ein Ferienplaner namens "[Trip]od".\\
 Der Ferienplaner dient zur Verwaltung und effizienten Planung von Ferien für Einzelpersonen oder ganzen Gruppen. Die Applikation dient also zur automatischen Datensammlung relevanter Daten um möglichst kostengünstig die Ferien geniessen zu können. Dazu wird es eine Webseite als Schnittstellenplattform geben, welche die gesamte Verwaltung übernimmt. Auf dem Server läuft dann die gesamte Logik wie API-Aufrufe, Datenverwaltung, Filterung oder Ausgabe.
 \chapter{Zielbestimmungen}\label{chp:DefinitionOfGoals}
-\begin{table}
-\begin{center}
-\begin{tabular}{l|l|l}
-Kriterium & Kurzbeschrieb & Beschreibung\\\hline
-\F{0010} & Account anlegen & E-Mail, Passwort
-\end{tabular}
-\end{center}
-\end{table}
 \section{Musskriterien}\label{sec:MustCriteria}
+\begin{table}[ht]\centering
+\begin{tabular}{l|p{4cm}|p{8cm}}\hline
+\tableheader{3}{Account verwalten}\\[0.3em]\hline
+Kriterium & Kurzbeschrieb & Beschreibung\\\hline
+\F{1000} & Account anlegen & E-Mail, Passwort
+\end{tabular}
+\caption{Musskriterien Account}\label{tbl:MustAccount}
+\end{table}
+
+\begin{table}[ht]\centering
+\begin{tabular}{l|p{4cm}|p{8cm}}\hline
+\tableheader{3}{Ferien verwalten}\\[0.3em]\hline
+Kriterium & Kurzbeschrieb & Beschreibung\\\hline
+\F{2000} & Ferien anlegen & Jede Person kann Ferien erstellen.
+\end{tabular}
+\caption{Musskriterien Ferien}\label{tbl:MustVacation}
+\end{table}
 \section{Wunschkriterien}\label{sec:WishCriteria}
+\begin{table}[ht]\centering
+\begin{tabular}{l|p{4cm}|p{8cm}}\hline
+\tableheader{3}{Ferien verwalten}\\[0.3em]\hline
+Kriterium & Kurzbeschrieb & Beschreibung\\\hline
+\W{2000} & Dokumente anhängen & Booking-Bestätigungen und ähnliche Dokumente sollen abgelegt werden können.
+\end{tabular}
+\caption{Wunschkriterien Ferien}\label{tbl:WishVacation}
+\end{table}
 \section{Abgrenzungskriterien}\label{sec:DistinctionCriteria}
+\begin{table}[ht]\centering
+\begin{tabular}{l|p{4cm}|p{8cm}}\hline
+\tableheader{3}{Allgemein}\\[0.3em]\hline
+Kriterium & Kurzbeschrieb & Beschreibung\\\hline
+\D{1000} & Booking & Die tatsächliche Tätigung von Käufen oder Buchungen soll nicht unterstützt werden.
+\end{tabular}
+\caption{Abgrenzungskriterien Allgemein}\label{tbl:DistinctionGeneral}
+\end{table}
 \chapter{Produkteinsatz}\label{chp:ProductApplication}
 \section{Anwendungsbereiche}\label{sec:FieldOfApplience}
+Genutzt wird die Applikation über das Web, welches die Zusammenarbeit von mehreren Personen an der gleichen Reise ermöglicht.
 \section{Benutzergruppen des Produktes}\label{sec:TargetAudience}
+Das Produkt gilt der öffentlichen, nicht-kommerziellen Nutzung und ist für Gruppen wie auch Einzelpersonen geeignet. Das umfasst Personen jeden Geschlechtes, Alters oder Region (Mehrsprachigkeit ist für die Seite vorerst jedoch nicht vorgesehen). Es sollen Personen mit Reiselust angesprochen werden, welche aber vielleicht kein grosses Budget zur Verfügung haben, wie Studenten. Das Programm soll auch eine Möglichkeit der Reiseplanung für Firmen oder Vereine darstellen.
 \chapter{Funktionale Anforderungen}\label{chp:FunctionalRequirements}
+Der Ferienplaner ist über einen eigenen Account zu verwalten. Jeder Reisende braucht einen eigenen Account (Dummy-Accounts für Gruppen könnten eine Alternative sein). Mit diesem Account lassen sich neue Ferien anlegen, denen andere Accounts hinzugefügt werden können. Bei Gruppen ist der Gruppenersteller automatisch der Gruppenadmin. Ferien können nun terminlich eingeschränkt, Abreise- und Rückkehrdaten festgelegt und Reiseziele bestimmt werden. Weitere Einstellmöglichkeiten (Minimum-Budget, Maximum-Komfort, etc.) können ebenfalls bestimmt werden. All diese Parameter können vom Admin uneingeschränkt und von Gruppenmitgliedern nach Revision des Admins und anderer Gruppenmitglieder aufgenommen werden.\\
+Nun kann auf Knopfdruck die Berechnung gestartet werden. Dabei werden über die API's von mehreren Anbietern Angebote gesammelt und Rechnungen getätigt. Der Output soll aus den Kosten der Ideallösung (Auswahl der Möglichkeiten evtl. ebenfalls möglich), einer Tabelle der buchbaren Mittel und einem Zeitplan bestehen. Das effektive Buchen geht dann aus Sicherheitsgründen weiterhin händisch über den Admin.
 \chapter{Funktionsbaum}\label{chp:FunctionTree}
 \chapter{Nicht-Funktionale Anforderungen}\label{chp:NonFunctionalRequirements}
+\begin{table}[ht]\centering
+\begin{tabular}{l|p{4cm}|p{8cm}}\hline
+Kriterium & Kurzbeschrieb & Beschreibung\\\hline
+\R{1000} & Gebrauchsfähigkeit (Usability) & Die Webseiten müssen durch den Benutzer, welcher dem Benutzerprofil entspricht, ohne weitere Hilfe verwendet werden können.\\
+\R{1010} & Fehlertoleranz & Hinweise und Fehlermeldungen müssen für den Benutzer verständlich formuliert sein und eine Hilfestellung zur Problemlösung beinhalten.\\
+\R{1020} & Sprache \& länderspezifische Einstellungen & Die Webseiten sind in deutscher Sprache (Schweiz) verfasst, verwenden den Zeichensatz UTF-8 und die Schweiz-spezifischen Einstellungen von Datum, Zeit, Zahlen und Währung.\\
+\R{1030} & Zielplattform (Server) & Die Web-Applikation muss als JavaServer-Pages auf dem zur Verfügung gestellten virtuellen Server unter Verwendung einer SQL-Datenbank mit Apache Tomcat betrieben werden.\\
+\R{1040} & Zielplattform (Client) & Die Webseiten werden in der aktuellsten freigegebenen Version des Mozilla Firefox und Google Chrome korrekt dargestellt.\\
+\R{1050} & Werkzeuge zur Entwicklung & Als Projektmanagement-Tool und zur Verwaltung des Sourcecode und der Dokumente muss der zur Verfügung gestellte github Server verwendet werden.\\
+\R{1060} & Robustheit & Auch nach einem Neustart des virtuellen Servers muss die Webseite voll funktionsfähig sein.\\
+\R{1070} & Testbarkeit & Für die Durchführung der Tests und der Abnahme müssen sinnvolle Testdaten in genügendem Umfang zur Verfügung gestellt werden.\\
+\end{tabular}
+\caption{Nicht-Funktionale Anforderungen}\label{tbl:NonFunctionalRequirements}
+\end{table}
 \chapter{Abnahmekriterien Anforderungen}\label{chp:TestRequirements}
+\begin{table}[ht]\centering
+\begin{tabular}{l|p{4cm}|p{8cm}}\hline
+Kriterium & Kurzbeschrieb & Beschreibung\\\hline
+\TF{1000} & Account anlegen und Profil befüllen & Es ist ein Account anzulegen mit dem Namen "Test Account" und der E-Mail-Addresse "account@test.me". Weiter soll das Profil wie folgt befüllt werden:\ldots
+\end{tabular}
+\caption{Abnahmekriterien}\label{tbl:TestRequirements}
+\end{table}
 \chapter{Verzeichnisse}\label{chp:Index}
 \printglossary\label{sec:Glossar}
 \newpage
