@@ -22,17 +22,20 @@
 
 \include{zhawSetup}
 
-\newcommand{\AddRequirement}[3]{
-\textbf{#1/#2/ - #3:}
+\newcommand{\AddRequirement}[2]{
+\textbf{/#1#2/}
 }
-\newcommand{\AddFRequirement}[2]{
-\AddRequirement{F}{#1}{#2}
+\newcommand{\F}[1]{
+\AddRequirement{F1.}{#1}
 }
-\newcommand{\AddNonFRequirement}[2]{
-\AddRequirement{R}{#1}{#2}
+\newcommand{\W}[1]{
+\AddRequirement{F2.}{#1}
 }
-\newcommand{\AddTestRequirement}[2]{
-\AddRequirement{T}{#1}{#2}
+\newcommand{\A}[1]{
+\AddRequirement{F3.}{#1}
+}
+\newcommand{\TF}[1]{
+\AddRequirement{T.}{#1}
 }
 
 \begin{document}
@@ -42,7 +45,17 @@
 \tableofcontents
 
 \chapter{Einleitung}\label{chp:Introduction}
+Geplant ist ein Ferienplaner namens "[Trip]od".\\
+Der Ferienplaner dient zur Verwaltung und effizienten Planung von Ferien für Einzelpersonen oder ganzen Gruppen. Die Applikation dient also zur automatischen Datensammlung relevanter Daten um möglichst kostengünstig die Ferien geniessen zu können. Dazu wird es eine Webseite als Schnittstellenplattform geben, welche die gesamte Verwaltung übernimmt. Auf dem Server läuft dann die gesamte Logik wie API-Aufrufe, Datenverwaltung, Filterung oder Ausgabe.
 \chapter{Zielbestimmungen}\label{chp:DefinitionOfGoals}
+\begin{table}
+\begin{center}
+\begin{tabular}{l|l|l}
+Kriterium & Kurzbeschrieb & Beschreibung\\\hline
+\F{0010} & Account anlegen & E-Mail, Passwort
+\end{tabular}
+\end{center}
+\end{table}
 \section{Musskriterien}\label{sec:MustCriteria}
 \section{Wunschkriterien}\label{sec:WishCriteria}
 \section{Abgrenzungskriterien}\label{sec:DistinctionCriteria}
