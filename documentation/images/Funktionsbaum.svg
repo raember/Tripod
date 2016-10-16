@@ -1,0 +1,166 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="3508" height="2480" viewBox="0 0 3508 2480">
+  <defs>
+    <style>
+      .cls-1, .cls-9 {
+        fill: #fff;
+        stroke: #000;
+        stroke-width: 2px;
+      }
+
+      .cls-2, .cls-3 {
+        font-size: 108.333px;
+      }
+
+      .cls-3, .cls-4, .cls-6, .cls-8 {
+        fill: #3b3a38;
+      }
+
+      .cls-3 {
+        text-anchor: end;
+        font-family: "Arial-BoldMT";
+        font-weight: bold;
+      }
+
+      .cls-4, .cls-9 {
+        fill-rule: evenodd;
+      }
+
+      .cls-5, .cls-6 {
+        font-size: 58.333px;
+      }
+
+      .cls-6, .cls-8 {
+        text-anchor: middle;
+        font-family: "Arial";
+      }
+
+      .cls-7, .cls-8 {
+        font-size: 41.667px;
+      }
+    </style>
+  </defs>
+  <rect x="1522" y="210" width="463" height="166" class="cls-1"/>
+  <text x="1933" y="324" class="cls-2"><tspan x="1933" class="cls-3">Tripod</tspan></text>
+  <path d="M467.047,378.498 L466.953,377.502 L1522.953,277.502 L1523.047,278.498 L467.047,378.498 Z" class="cls-4"/>
+  <path d="M2700.068,376.505 L2699.932,377.495 L1981.932,278.495 L1982.068,277.505 L2700.068,376.505 Z" class="cls-4"/>
+  <rect x="243" y="377" width="463" height="166" class="cls-1"/>
+  <text x="473" y="444" class="cls-5"><tspan x="473" class="cls-6">Ferien</tspan><tspan dy="1.2em" x="473" class="cls-6">verwalten</tspan></text>
+  <g>
+    <rect x="2443" y="376" width="463" height="166" class="cls-1"/>
+    <text x="2685" y="441" class="cls-5"><tspan x="2685" class="cls-6">Account</tspan><tspan dy="1.2em" x="2685" class="cls-6">verwalten</tspan></text>
+    <rect x="2802" y="836" width="463" height="166" class="cls-1"/>
+    <text x="3017" y="934" class="cls-7"><tspan x="3017" class="cls-8">Account anlegen</tspan></text>
+    <rect x="2802" y="591" width="463" height="166" class="cls-1"/>
+    <text x="3035" y="689" class="cls-7"><tspan x="3035" class="cls-8">Account bearbeiten</tspan></text>
+    <path d="M2688.000,540.000 L2689.000,540.000 L2689.000,923.000 L2688.000,923.000 L2688.000,540.000 Z" class="cls-4"/>
+    <path d="M2689.000,923.000 L2689.000,922.000 L2803.000,922.000 L2803.000,923.000 L2689.000,923.000 Z" class="cls-4"/>
+    <path d="M2690.000,675.000 L2690.000,674.000 L2803.000,674.000 L2803.000,675.000 L2690.000,675.000 Z" class="cls-4"/>
+  </g>
+  <g>
+    <rect x="443" y="577" width="463" height="166" class="cls-1"/>
+    <text x="658" y="668" class="cls-7"><tspan x="658" class="cls-8">Ferien anlegen</tspan></text>
+  </g>
+  <g>
+    <rect x="443" y="768" width="463" height="166" class="cls-1"/>
+    <text x="676" y="866" class="cls-7"><tspan x="676" class="cls-8">Personen verwalten</tspan></text>
+    <g>
+      <rect x="1041" y="768" width="463" height="166" class="cls-1"/>
+      <text x="1274" y="866" class="cls-7"><tspan x="1274" class="cls-8">Personen hinzufügen</tspan></text>
+    </g>
+    <path d="M907.000,854.000 L907.000,853.000 L1041.000,853.000 L1041.000,854.000 L907.000,854.000 Z" class="cls-4"/>
+    <path d="M975.000,854.000 L976.000,854.000 L976.000,1044.000 L975.000,1044.000 L975.000,854.000 Z" class="cls-4"/>
+    <path d="M975.000,1044.000 L975.000,1043.000 L1039.000,1043.000 L1039.000,1044.000 L975.000,1044.000 Z" class="cls-4"/>
+    <g>
+      <rect x="1039" y="959" width="463" height="166" class="cls-1"/>
+      <text x="1272" y="1057" class="cls-7"><tspan x="1272" class="cls-8">Personen abmelden</tspan></text>
+    </g>
+  </g>
+  <g>
+    <rect x="443" y="959" width="463" height="166" class="cls-1"/>
+    <text x="671" y="1053" class="cls-7"><tspan x="671" class="cls-8">Daten festlegen</tspan></text>
+  </g>
+  <g>
+    <rect x="443" y="1150" width="463" height="166" class="cls-1"/>
+    <text x="676" y="1248" class="cls-7"><tspan x="676" class="cls-8">Budget festlegen</tspan></text>
+  </g>
+  <path d="M281.500,540.999 L282.500,541.001 L278.500,2193.001 L277.500,2192.999 L281.500,540.999 Z" class="cls-4"/>
+  <path d="M278.000,2193.000 L278.000,2192.000 L444.000,2192.000 L444.000,2193.000 L278.000,2193.000 Z" class="cls-4"/>
+  <path d="M279.000,1988.000 L279.000,1987.000 L445.000,1987.000 L445.000,1988.000 L279.000,1988.000 Z" class="cls-4"/>
+  <path d="M280.000,1799.000 L280.000,1798.000 L443.000,1798.000 L443.000,1799.000 L280.000,1799.000 Z" class="cls-4"/>
+  <path d="M279.000,1608.000 L279.000,1607.000 L443.000,1607.000 L443.000,1608.000 L279.000,1608.000 Z" class="cls-4"/>
+  <path d="M281.000,1416.000 L281.000,1415.000 L444.000,1415.000 L444.000,1416.000 L281.000,1416.000 Z" class="cls-4"/>
+  <path d="M280.000,1233.000 L280.000,1232.000 L444.000,1232.000 L444.000,1233.000 L280.000,1233.000 Z" class="cls-4"/>
+  <path d="M282.000,1040.000 L282.000,1039.000 L444.000,1039.000 L444.000,1040.000 L282.000,1040.000 Z" class="cls-4"/>
+  <path d="M281.000,852.000 L281.000,851.000 L444.000,851.000 L444.000,852.000 L281.000,852.000 Z" class="cls-4"/>
+  <path d="M283.000,652.000 L283.000,651.000 L443.000,651.000 L443.000,652.000 L283.000,652.000 Z" class="cls-4"/>
+  <path d="M2398.304,1090.603 L2397.696,1091.397 L2380.696,1078.397 L2381.304,1077.603 L2398.304,1090.603 Z" class="cls-4"/>
+  <g>
+    <rect x="442" y="1341" width="463" height="166" class="cls-1"/>
+    <text x="676" y="1436" class="cls-7"><tspan x="676" class="cls-8">Destination verwalten</tspan></text>
+    <g>
+      <rect x="2338" y="1341" width="463" height="166" class="cls-1"/>
+      <text x="2572" y="1413" class="cls-7"><tspan x="2572" class="cls-8">Destination</tspan><tspan dy="1.2em" x="2572" class="cls-8">hinzufügen</tspan></text>
+    </g>
+    <g>
+      <rect x="2336" y="1532" width="463" height="166" class="cls-1"/>
+      <text x="2570" y="1605" class="cls-7"><tspan x="2570" class="cls-8">Destination</tspan><tspan dy="1.2em" x="2570" class="cls-8">bearbeiten</tspan></text>
+    </g>
+    <g>
+      <rect x="2336" y="1723" width="463" height="166" class="cls-1"/>
+      <text x="2570" y="1796" class="cls-7"><tspan x="2570" class="cls-8">Destination</tspan><tspan dy="1.2em" x="2570" class="cls-8">entfernen</tspan></text>
+    </g>
+    <path d="M907.000,1425.000 L907.000,1424.000 L2338.000,1424.000 L2338.000,1425.000 L907.000,1425.000 Z" class="cls-9"/>
+    <path d="M2214.000,1425.000 L2215.000,1425.000 L2215.000,1807.000 L2214.000,1807.000 L2214.000,1425.000 Z" class="cls-9"/>
+    <path d="M2214.000,1807.000 L2214.000,1806.000 L2337.000,1806.000 L2337.000,1807.000 L2214.000,1807.000 Z" class="cls-9"/>
+    <path d="M2215.000,1606.000 L2215.000,1605.000 L2337.000,1605.000 L2337.000,1606.000 L2215.000,1606.000 Z" class="cls-9"/>
+  </g>
+  <g>
+    <rect x="442" y="1532" width="463" height="166" class="cls-1"/>
+    <text x="674" y="1605" class="cls-7"><tspan x="674" class="cls-8">Verkehrsmittel</tspan><tspan dy="1.2em" x="674" class="cls-8">verwalten</tspan></text>
+    <g>
+      <rect x="1679" y="1532" width="463" height="166" class="cls-1"/>
+      <text x="1913" y="1604" class="cls-7"><tspan x="1913" class="cls-8">Verkehrsmittel</tspan><tspan dy="1.2em" x="1913" class="cls-8">hinzufügen</tspan></text>
+    </g>
+    <g>
+      <rect x="1677" y="1723" width="463" height="166" class="cls-1"/>
+      <text x="1911" y="1796" class="cls-7"><tspan x="1911" class="cls-8">Verkehrsmittel</tspan><tspan dy="1.2em" x="1911" class="cls-8">bearbeiten</tspan></text>
+    </g>
+    <g>
+      <rect x="1677" y="1914" width="463" height="166" class="cls-1"/>
+      <text x="1911" y="1987" class="cls-7"><tspan x="1911" class="cls-8">Verkehrsmittel</tspan><tspan dy="1.2em" x="1911" class="cls-8">entfernen</tspan></text>
+    </g>
+    <path d="M907.000,1608.000 L907.000,1607.000 L1681.000,1607.000 L1681.000,1608.000 L907.000,1608.000 Z" class="cls-9"/>
+    <path d="M1577.000,1609.000 L1578.000,1609.000 L1578.000,1997.000 L1577.000,1997.000 L1577.000,1609.000 Z" class="cls-9"/>
+    <path d="M1578.000,1998.000 L1578.000,1997.000 L1677.000,1997.000 L1677.000,1998.000 L1578.000,1998.000 Z" class="cls-9"/>
+    <path d="M1578.000,1790.000 L1578.000,1789.000 L1679.000,1789.000 L1679.000,1790.000 L1578.000,1790.000 Z" class="cls-9"/>
+  </g>
+  <g>
+    <rect x="442" y="1723" width="463" height="166" class="cls-1"/>
+    <text x="670" y="1817" class="cls-7"><tspan x="670" class="cls-8">Unterkunft verwalten</tspan></text>
+    <g>
+      <rect x="1041" y="1723" width="463" height="166" class="cls-1"/>
+      <text x="1275" y="1795" class="cls-7"><tspan x="1275" class="cls-8">Unterkunft </tspan><tspan dy="1.2em" x="1275" class="cls-8">hinzufügen</tspan></text>
+    </g>
+    <g>
+      <rect x="1039" y="1914" width="463" height="166" class="cls-1"/>
+      <text x="1273" y="1987" class="cls-7"><tspan x="1273" class="cls-8">Unterkunft</tspan><tspan dy="1.2em" x="1273" class="cls-8">bearbeiten</tspan></text>
+    </g>
+    <g>
+      <rect x="1039" y="2105" width="463" height="166" class="cls-1"/>
+      <text x="1273" y="2178" class="cls-7"><tspan x="1273" class="cls-8">Unterkunft</tspan><tspan dy="1.2em" x="1273" class="cls-8">entfernen</tspan></text>
+    </g>
+    <path d="M907.000,1809.000 L907.000,1808.000 L1041.000,1808.000 L1041.000,1809.000 L907.000,1809.000 Z" class="cls-4"/>
+    <path d="M975.000,1809.000 L976.000,1809.000 L976.000,1999.000 L975.000,1999.000 L975.000,1809.000 Z" class="cls-4"/>
+    <path d="M975.000,1999.000 L975.000,1998.000 L1039.000,1998.000 L1039.000,1999.000 L975.000,1999.000 Z" class="cls-4"/>
+    <path d="M975.000,1996.000 L976.000,1996.000 L976.000,2189.000 L975.000,2189.000 L975.000,1996.000 Z" class="cls-4"/>
+    <path d="M975.000,2193.000 L975.000,2192.000 L1040.000,2192.000 L1040.000,2193.000 L975.000,2193.000 Z" class="cls-4"/>
+  </g>
+  <g>
+    <rect x="443" y="1914" width="463" height="166" class="cls-1"/>
+    <text x="675" y="1987" class="cls-7"><tspan x="675" class="cls-8">Kommentare</tspan><tspan dy="1.2em" x="675" class="cls-8">-Funktion</tspan></text>
+  </g>
+  <g>
+    <rect x="443" y="2105" width="463" height="166" class="cls-1"/>
+    <text x="677" y="2200" class="cls-7"><tspan x="677" class="cls-8">Dokumente anhängen</tspan></text>
+  </g>
+</svg>
