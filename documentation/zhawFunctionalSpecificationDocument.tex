@@ -53,53 +53,54 @@ Geplant ist ein Ferienplaner namens "[Trip]od".\\
 Der Ferienplaner dient zur Verwaltung und effizienten Planung von Ferien für Einzelpersonen oder ganzen Gruppen. Die Applikation dient also zur automatischen Datensammlung relevanter Daten um möglichst kostengünstig die Ferien geniessen zu können. Dazu wird es eine Webseite als Schnittstellenplattform geben, welche die gesamte Verwaltung übernimmt. Auf dem Server läuft dann die gesamte Logik wie API-Aufrufe, Datenverwaltung, Filterung oder Ausgabe.
 \chapter{Zielbestimmungen}\label{chp:DefinitionOfGoals}
 \section{Musskriterien}\label{sec:MustCriteria}
+In den folgenden Tabellen sind die Musskriterien des [Trip]od's definiert.
 \begin{table}[ht]\centering
-\begin{tabular}{l|p{4.5cm}|p{7.5cm}}\hline
-\tableheader{3}{Account verwalten}\\[0.3em]\hline
-Kriterium & Kurzbeschrieb & Beschreibung\\\hline
-\F{1000} & Account anlegen & E-Mail, Passwort\\\hline
-\F{1010} & Account bearbeiten & Passwort ändern, persönliche Daten ausfüllen
+\begin{tabular}{l}\hline
+\tableheader{1}{Account verwalten}\\[0.3em]\hline
+\textbf{Kriterium}\\\hline
+Account anlegen\\\hline
+Account bearbeiten (Passwort ändern, persönliche Daten ausfüllen)\\\hline
+Benutzer an- und abmelden\\\hline
 \end{tabular}
 \caption{Musskriterien Account}\label{tbl:MustAccount}
 \end{table}
 
 \begin{table}[ht]\centering
-\begin{tabular}{l|p{4.5cm}|p{7.5cm}}\hline
-\tableheader{3}{Ferien verwalten}\\[0.3em]\hline
-Kriterium & Kurzbeschrieb & Beschreibung\\\hline
-\F{2000} & Ferien anlegen & Jede Person kann Ferien erstellen.\\\hline
-\F{2010} & Personen hinzufügen & Jede Person kann zusätzliche Personen hinzufügen.\\\hline
-\F{2020} & Personen abmelden & Jede Person kann sich oder andere Personen entfernen.\\\hline
-\F{2030} & Daten festlegen & Der Zeitraum der Ferien muss bestimmt werden, bevor weitergefahren werden kann.\\\hline
-\F{2040} & Budget festlegen & Das Budget muss festgelegt werden. Dieses besteht aus den Kosten der Reise und der Unterkunft.\\\hline
-\F{2050} & Destination hinzufügen & Jede Person kann eine Destination hinzufügen.\\\hline
-\F{2060} & Destination bearbeiten & Jede Person kann eine Destination bearbeiten.\\\hline
-\F{2070} & Destination entfernen & Jede Person kann eine Destination entfernen.\\\hline
-\F{2080} & Verkehrsmittel hinzufügen & Jede Person kann ein Verkehrsmittel hinzufügen. Hierzu kann ein Link des jeweiligen Angebotes hinterlegt werden.\\\hline
-\F{2090} & Verkehrsmittel bearbeiten & Jede Person kann ein Verkehrsmittel bearbeiten.\\\hline
-\F{2100} & Verkehrsmittel entfernen & Jede Person kann ein Verkehrsmittel entfernen.\\\hline
-\F{2110} & Unterkunft hinzufügen & Jede Person kann eine Unterkunft hinzufügen. Hierzu kann ein Link des jeweiligen Angebotes hinterlegt werden.\\\hline
-\F{2120} & Unterkunft bearbeiten & Jede Person kann eine Unterkunft bearbeiten.\\\hline
-\F{2130} & Unterkunft entfernen & Jede Person kann eine Unterkunft entfernen.\\\hline
-\F{2140} & Kommentare-Funktion & Jede Person kann Kommentare hinterlassen (Chat).\\\hline
+\begin{tabular}{l}\hline
+\tableheader{1}{Ferien verwalten}\\[0.3em]\hline
+\textbf{Kriterium}\\\hline
+Ferien anlegen\\\hline
+Personen hinzufügen und entfernen\\\hline
+Reisedaten festlegen\\\hline
+Budget festlegen\\\hline
+Destination hinzufügen, bearbeiten, entfernen \\\hline
+Verkehrsmittel hinzufügen, bearbeiten, entfernen\\\hline
+Unterkunft hinzufügen, bearbeiten, entfernen\\\hline
+Kommentar-Funktion\\\hline
+Offline-Export\\\hline
 \end{tabular}
 \caption{Musskriterien Ferien}\label{tbl:MustVacation}
 \end{table}\newpage
 \section{Wunschkriterien}\label{sec:WishCriteria}
+Um den Funktionsumfang bei verbleibender Zeit zu erweitern, wurden die in der folgenden Tabelle stehenden Wunschkriterien definiert.
 \begin{table}[ht]\centering
-\begin{tabular}{l|p{4.5cm}|p{7.5cm}}\hline
-\tableheader{3}{Ferien verwalten}\\[0.3em]\hline
-Kriterium & Kurzbeschrieb & Beschreibung\\\hline
-\W{2000} & Dokumente anhängen & Booking-Bestätigungen und ähnliche Dokumente sollen abgelegt werden können.
+\begin{tabular}{l}\hline
+\tableheader{1}{Ferien verwalten}\\[0.3em]\hline
+\textbf{Kriterium}\\\hline
+Dokumente anhängen\\\hline
+Mehrere Destinationen\\\hline
+API-basierte Flugsuche\\\hline
+API-basierte Unterkunftssuche\\\hline
 \end{tabular}
 \caption{Wunschkriterien Ferien}\label{tbl:WishVacation}
 \end{table}
 \section{Abgrenzungskriterien}\label{sec:DistinctionCriteria}
+Die in diesem Kapitel definierten Abgrenzungskriterien sollen bewusst nicht erreicht werden.
 \begin{table}[ht]\centering
-\begin{tabular}{l|p{4cm}|p{8cm}}\hline
-\tableheader{3}{Allgemein}\\[0.3em]\hline
-Kriterium & Kurzbeschrieb & Beschreibung\\\hline
-\D{1000} & Booking & Die tatsächliche Tätigung von Käufen oder Buchungen soll nicht unterstützt werden.
+\begin{tabular}{l|p{2.5cm}|p{5cm}|p{2cm}|p{1.5cm}}\hline
+\tableheader{5}{Allgemein}\\[0.3em]\hline
+\textbf{Kriterium} & \textbf{Kurzbeschrieb} & \textbf{Beschreibung} & \textbf{Komplexität} & \textbf{Priorität}\\\hline
+\D{1000} & Booking & Die tatsächliche Tätigung von Käufen oder Buchungen soll nicht unterstützt werden. & hoch & tief\\\hline
 \end{tabular}
 \caption{Abgrenzungskriterien Allgemein}\label{tbl:DistinctionGeneral}
 \end{table}
@@ -111,11 +112,52 @@ Das Produkt gilt der öffentlichen, nicht-kommerziellen Nutzung und ist für Gru
 \chapter{Funktionale Anforderungen}\label{chp:FunctionalRequirements}
 Der Ferienplaner ist über einen eigenen Account zu verwalten. Jeder Reisende braucht einen eigenen Account (Dummy-Accounts für Gruppen könnten eine Alternative sein). Mit diesem Account lassen sich neue Ferien anlegen, denen andere Accounts hinzugefügt werden können. Bei Gruppen ist der Gruppenersteller automatisch der Gruppenadmin. Ferien können nun terminlich eingeschränkt, Abreise- und Rückkehrdaten festgelegt und Reiseziele bestimmt werden. Weitere Einstellmöglichkeiten (Minimum-Budget, Maximum-Komfort, etc.) können ebenfalls bestimmt werden. All diese Parameter können vom Admin uneingeschränkt und von Gruppenmitgliedern nach Revision des Admins und anderer Gruppenmitglieder aufgenommen werden.\\
 Nun kann auf Knopfdruck die Berechnung gestartet werden. Dabei werden über die API's von mehreren Anbietern Angebote gesammelt und Rechnungen getätigt. Der Output soll aus den Kosten der Ideallösung (Auswahl der Möglichkeiten evtl. ebenfalls möglich), einer Tabelle der buchbaren Mittel und einem Zeitplan bestehen. Das effektive Buchen geht dann aus Sicherheitsgründen weiterhin händisch über den Admin.
+
+\begin{table}[ht]\centering
+\begin{tabular}{l|p{2.5cm}|p{5cm}|p{2cm}|p{1.5cm}}\hline
+\tableheader{5}{Account verwalten}\\[0.3em]\hline
+\textbf{Kriterium} & \textbf{Kurzbeschrieb} & \textbf{Beschreibung} & \textbf{Komplexität} & \textbf{Priorität}\\\hline
+\F{1000} & Account anlegen & Es kann ein Account mit E-Mail, Passwort und persönlichen Daten erstellt werden. & mittel & hoch\\\hline
+\F{1010} & Account bearbeiten & Das Passwort und die persönlichen Daten können angepasst werden. & tief & hoch\\\hline
+\F{1020} & Benutzer anmelden & Ein Benutzer kann sich mit seinem Account (E-Mail und Passwort) anmelden. & mittel & hoch\\\hline
+\F{1030} & Benutzer abmelden & Ein Benutzer kann sich, wenn er angemeldet ist, auch wieder abmelden. & tief & hoch\\\hline
+\end{tabular}
+\caption{Funktionale Anforderungen Account}\label{tbl:FuncAccount}
+\end{table}
+
+\begin{table}[ht]\centering
+\begin{tabular}{l|p{2.5cm}|p{5cm}|p{2cm}|p{1.5cm}}\hline
+\tableheader{5}{Ferien verwalten}\\[0.3em]\hline
+\textbf{Kriterium} & \textbf{Kurzbeschrieb} & \textbf{Beschreibung} & \textbf{Komplexität} & \textbf{Priorität}\\\hline
+\F{2000} & Ferien anlegen & Jede Person kann Ferien erstellen. & tief & hoch\\\hline
+\F{2010} & Personen hinzufügen & Jede Person kann zusätzliche Personen hinzufügen. & tief & hoch\\\hline
+\F{2020} & Personen entfernen & Jede Person kann sich oder andere Personen entfernen. & tief & hoch\\\hline
+\F{2030} & Reisedaten festlegen & Der Zeitraum der Ferien kann festgelegt werden. & tief & hoch\\\hline
+\F{2040} & Budget festlegen & Das Budget muss festgelegt werden. Dieses besteht aus den Kosten der Reise und der Unterkunft. & tief & hoch\\\hline
+\F{2050} & Destination hinzufügen & Jede Person kann eine Destination hinzufügen. & tief & hoch\\\hline
+\F{2060} & Destination bearbeiten & Jede Person kann eine Destination bearbeiten. & tief & hoch\\\hline
+\F{2070} & Destination entfernen & Jede Person kann eine Destination entfernen. & tief & hoch\\\hline
+\F{2080} & Verkehrsmittel hinzufügen & Jede Person kann ein Verkehrsmittel hinzufügen. Hierzu kann ein Link des jeweiligen Angebotes hinterlegt werden. & tief & hoch\\\hline
+\F{2090} & Verkehrsmittel bearbeiten & Jede Person kann ein Verkehrsmittel bearbeiten. & tief & hoch\\\hline
+\F{2100} & Verkehrsmittel entfernen & Jede Person kann ein Verkehrsmittel entfernen. & tief & hoch\\\hline
+\F{2110} & Unterkunft hinzufügen & Jede Person kann eine Unterkunft hinzufügen. Hierzu kann ein Link des jeweiligen Angebotes hinterlegt werden. & tief & hoch\\\hline
+\F{2120} & Unterkunft bearbeiten & Jede Person kann eine Unterkunft bearbeiten. & tief & hoch\\\hline
+\F{2130} & Unterkunft entfernen & Jede Person kann eine Unterkunft entfernen. & tief & hoch\\\hline
+\F{2140} & Kommentar-Funktion & Jede Person kann Kommentare hinterlassen (Chat). & mittel & hoch\\\hline
+\F{2150} & Offline-Export & Jede Person kann einen Export mit den wichtigsten Daten der Ferien herunterladen. & mittel & hoch\\\hline
+\W{2000} & Dokumente anhängen & Booking-Bestätigungen und ähnliche Dokumente sollen abgelegt werden können. & hoch & tief\\\hline
+\W{2010} & Mehrere Destinationen & Es soll möglich sein, eine Planung für mehrere Destinationen hintereinander zu machen. & hoch & tief\\\hline
+\W{2020} & API-basierte Flugsuche & Es soll möglich sein, Flugangebote über eine API abzurufen. z.B. Google Flights & hoch & tief\\\hline
+\W{2030} & API-basierte Unterkunftssuche & Es soll möglich sein, Unterkünfte über eine API abzurufen. z.B. Booking.com & hoch & tief\\\hline
+\end{tabular}
+\caption{Funktionale Anforderungen Ferien}\label{tbl:FuncVacation}
+\end{table}\newpage
+
 \chapter{Funktionsbaum}\label{chp:FunctionTree}
 \chapter{Nicht-Funktionale Anforderungen}\label{chp:NonFunctionalRequirements}
 \begin{table}[ht]\centering
 \begin{tabular}{l|p{4cm}|p{8cm}}\hline
-Kriterium & Kurzbeschrieb & Beschreibung\\\hline
+\textbf{Kriterium} & \textbf{Kurzbeschrieb} & \textbf{Beschreibung}\\\hline
 \R{1000} & Gebrauchsfähigkeit (Usability) & Die Webseiten müssen durch den Benutzer, welcher dem Benutzerprofil entspricht, ohne weitere Hilfe verwendet werden können.\\
 \R{1010} & Fehlertoleranz & Hinweise und Fehlermeldungen müssen für den Benutzer verständlich formuliert sein und eine Hilfestellung zur Problemlösung beinhalten.\\
 \R{1020} & Sprache \& länderspezifische Einstellungen & Die Webseiten sind in deutscher Sprache (Schweiz) verfasst, verwenden den Zeichensatz UTF-8 und die Schweiz-spezifischen Einstellungen von Datum, Zeit, Zahlen und Währung.\\
