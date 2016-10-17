@@ -42,6 +42,9 @@
 }
 \newcommand{\tableheader}[2]{\multicolumn{#1}{c}{\raisebox{-0.3em}[0ex][0ex]{\large{\textbf{#2}}}}}
 
+\numberwithin{table}{chapter}
+%\renewcommand{\thetable}{\arabic{chapter}.\arabic{table}}
+
 \begin{document}
 
 \maketitle
@@ -182,6 +185,8 @@ Kriterium & Kurzbeschrieb & Beschreibung\\\hline
 \end{table}
 \chapter{Verzeichnisse}\label{chp:Index}
 \printglossary\label{sec:Glossar}
+\listoftables
+\printindex
 \newpage
 \bibliography{reference}\label{sec:Bibliography}
 \end{document}
