@@ -80,7 +80,7 @@ line/.style = {
 \node(F2020)[SubNode,below=of F2010] {Personen entfernen};
 \draw[line](F20100) ++ (2.5cm, 0pt) |- (F2020);
 
-\AddSubNode{F2020}{F2}{F20100}{Daten festlegen}
+\AddSubNode{F2020}{F2}{F20100}{Reisedaten festlegen}
 \AddSubNode{F2030}{F2}{F2020}{Budget festlegen}
 \AddSubNode{F20400}{F2}{F2030}{Destinationen verwalten}
 
@@ -110,12 +110,14 @@ line/.style = {
 \draw[line](F21000) ++ (2.5cm, 0pt) |- (F2120);
 
 \AddSubNode{F2130}{F2}{F21000}{Kommentar-Funktion}
-\AddSubNode{F2140}{F2}{F2130}{Dokumente anhängen}
+\AddSubNode{F2140}{F2}{F2130}{Offline-Export}
 
 
 \NewMainNode{F1}{$(F2)+(MainOffset)$}{Account}
-\NewSubNode{F1010}{F1}{Account anlegen}
-\AddSubNode{F1020}{F1}{F1010}{Account bearbeiten}
+\NewSubNode{F1000}{F1}{Account anlegen}
+\AddSubNode{F1010}{F1}{F1010}{Account bearbeiten}
+\AddSubNode{F1020}{F1}{F1020}{Benutzer anmelden}
+\AddSubNode{F1030}{F1}{F1030}{Benutzer abmelden}
 
 \end{tikzpicture}
 \end{turn}
