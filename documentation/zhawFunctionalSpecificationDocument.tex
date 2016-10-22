@@ -13,7 +13,7 @@
 %%	
 
 \RequirePackage[l2tabu,orthodox]{nag}
-\documentclass[10pt,a4paper,titlepage,twoside,german]{zhawreprt}
+\documentclass[10pt,a4paper,titlepage,twoside,german,final]{zhawreprt}
 
 \include{packages}
 \if false
@@ -47,7 +47,14 @@
 
 \begin{document}
 
-\maketitle
+\makezhawtitle{
+\begin{center}
+\begin{tikzpicture}
+\fill[fill=green!20,draw=green!80!black](0,0) rectangle (12,5);
+\node[text=white,rotate=30] at (6,2.5){\Huge\textbf{[Trip]od}};
+\end{tikzpicture}
+\end{center}
+}
 
 \tableofcontents
 

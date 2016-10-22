@@ -158,22 +158,21 @@
 \AddLayersToPageStyle{nonnumbering}{top.odd,top.even,bottom.odd,bottom.even}
 
 
-\renewcommand*\maketitle[1][1]{%
-  \expandafter\ifnum \csname scr@v@3.12\endcsname>\scr@compatibility\relax
-  \else
-    \def\and{%
-      \end{tabular}%
-      \hskip 1em \@plus.17fil%
-      \begin{tabular}[t]{c}%
-    }%
-  \fi
-  \if@titlepage
+\newcommand\makezhawtitle[1]{%
+\expandafter\ifnum \csname scr@v@3.12\endcsname>\scr@compatibility\relax
+\else
+	\def\and{%
+		\end{tabular}%
+		\hskip 1em \@plus.17fil%
+		\begin{tabular}[t]{c}%
+	}%
+\fi
+\if@titlepage
     \begin{titlepage}
-    \setcounter{page}{#1}
 	\ThisTileWallPaper{\paperwidth}{\paperheight}{images/logos/SoE.pdf}%
 	\hfill
-	\begin{minipage}[b]{0.91\textwidth}
-	\vskip 2.8cm
+	\begin{minipage}{0.91\textwidth}
+		\vskip 2.8cm
 		{\huge
 		\textbf{\underline{\zhaw@project}}\\
 		\textbf{\underline{\zhaw@major}}\vskip 0.2cm
@@ -237,26 +236,25 @@
 		\hrule\vskip 0.5cm
 			\zhaw@date
 		\end{minipage}
-	\end{minipage}
+	\end{minipage}\vskip 0.5cm
+	#1
 	\vskip 0.5cm
 	\iffinal\else
-	\textcolor{darkgray}{
-	Bitte füllen Sie das Titelblatt aus und berücksichtigen Sie Folgendes:\\
-	 -> Bitte auf keinen Fall Schriftart und Schriftgrösse ändern. Text soll lediglich überschrieben werden!\\
-	 -> Bitte pro Tabellenzeile max. 4 Textzeilen!\vspace{1em}\\
-	•	Titel: Fügen Sie Ihren Studiengang direkt nach dem Wort „\zhaw@Project“ ein (max. 2 Zeilen).\\
-	•	Titel der Arbeit: Überschreiben Sie den Lauftext mit dem Titel Ihrer Arbeit (max. 4 Zeilen).\\
-	•	Autoren: Tragen Sie Ihre Vor- und Nachnamen ein (alphabetisch nach Name).\\
-	•	Betreuer: Tragen Sie Ihren Betreuer / Ihre Betreuer ein (alphabetisch nach Name).\\
-	•	Ohne Nebenbetreuung, Industriepartner oder externe Betreuung, ganze Tabellenzeile löschen.\\
-	•	Am Schluss löschen Sie den ganzen Beschrieb (grau) und speichern das Dokument als pdf. ab.%
-	}
+		\textcolor{darkgray}{
+		Bitte füllen Sie das Titelblatt aus und berücksichtigen Sie Folgendes:\\
+		 -> Bitte auf keinen Fall Schriftart und Schriftgrösse ändern. Text soll lediglich überschrieben werden!\\
+		 -> Bitte pro Tabellenzeile max. 4 Textzeilen!\vspace{1em}\\
+		•	Titel: Fügen Sie Ihren Studiengang direkt nach dem Wort „\zhaw@Project“ ein (max. 2 Zeilen).\\
+		•	Titel der Arbeit: Überschreiben Sie den Lauftext mit dem Titel Ihrer Arbeit (max. 4 Zeilen).\\
+		•	Autoren: Tragen Sie Ihre Vor- und Nachnamen ein (alphabetisch nach Name).\\
+		•	Betreuer: Tragen Sie Ihren Betreuer / Ihre Betreuer ein (alphabetisch nach Name).\\
+		•	Ohne Nebenbetreuung, Industriepartner oder externe Betreuung, ganze Tabellenzeile löschen.\\
+		•	Am Schluss löschen Sie den ganzen Beschrieb (grau) und speichern das Dokument als pdf. ab.%
+		}
 	\fi
     \end{titlepage}
-  \else
+\else
     \par
-    \@tempcnta=%
-    #1%
     \relax\ifnum\@tempcnta=1\else
       \ClassWarning{\KOMAClassName}{%
         Optional argument of \string\maketitle\space ignored
@@ -292,9 +290,9 @@
       \ifx\titlepagestyle\@empty\else\thispagestyle{\titlepagestyle}\fi
       \@thanks
     \endgroup
-  \fi
-  \setcounter{footnote}{0}%
-  \expandafter\ifnum \csname scr@v@3.12\endcsname>\scr@compatibility\relax
+\fi
+\setcounter{footnote}{0}%
+\expandafter\ifnum \csname scr@v@3.12\endcsname>\scr@compatibility\relax
     \let\thanks\relax
     \let\maketitle\relax
     \let\@maketitle\relax
@@ -320,8 +318,8 @@
     \global\let\lowertitleback\relax
     \global\let\dedication\relax
     \global\let\date\relax
-  \fi
-  \global\let\and\relax
+\fi
+\global\let\and\relax
 }%
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 
