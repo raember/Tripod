@@ -59,8 +59,21 @@
 \tableofcontents
 
 \chapter{Einleitung}\label{chp:Introduction}
-Geplant ist ein Ferienplaner namens "[Trip]od".\\
-Der Ferienplaner dient zur Verwaltung und effizienten Planung von Ferien für Einzelpersonen oder ganzen Gruppen. Die Applikation dient also zur automatischen Datensammlung relevanter Daten um möglichst kostengünstig die Ferien geniessen zu können. Dazu wird es eine Webseite als Schnittstellenplattform geben, welche die gesamte Verwaltung übernimmt. Auf dem Server läuft dann die gesamte Logik wie API-Aufrufe, Datenverwaltung, Filterung oder Ausgabe.
+Unsere Gruppe hat beim Brainstorming festgestellt, dass es noch kein geeignetes Werkzeug gibt, mit welchem man seine Ferien planen kann, sämtliche Informationen an einem Ort gesammelt sind und auf diese Informationen von jedem Mitglied der Reisegruppe jederzeit darauf zugegriffen werden kann. Aus diesem Grund haben wir beschlossen, diese Lücke zu schliessen.\\
+Geplant ist in unserem Projekt eine Webapplikation, mit welcher der Nutzer bequem seine künftigen Ferien planen kann.\\
+Der Ferienplaner trägt den Namen [Trip]od, welcher sich aus folgenden drei Punkten zusammensetzt:
+\begin{itemize}
+\item TRIP: steht für die kommende Reise
+\item POD: englisches Sprichwort "like two peas in a pod" (übersetzt: wie zwei Erbsen in einer Schote), steht in unserem Fall dafür, dass die Reisenden alle eine gemeinsame Faszination teilen
+\item TRIPOD: das Stativ, auf welchem das Fernrohr befestigt ist, um auf der Reise in die Ferne zu schauen
+\end{itemize}
+Der Nutzer kann sich auf der Webseite registrieren und sich einloggen. Anschliessend kann die Planung bereits gestartet werden. Man legt zuerst die Ferien und kann, wenn dies gewünscht ist, beliebig Freunde dazu einladen. Diese Freunde müssen sich auch registrieren und können dann bei der Planung sofort mitwirken. Als nächster Schritt einigt man sich auf einen Zeitraum, in dem die Ferien stattfinden, auf ein Reiseziel und ein Budget.\\
+Nun informiert sich jeder Teilnehmer über mögliche Verkehrsmittel, um zu der gewünschten Destination zu gelangen und über mögliche Unterkunften. Diese Suche findet in einem ersten Schritt ausserhalb unserer Webseite statt. Ein Wunschziel von uns ist es, dass wir über verschiedene API's der Anbieter (Schnittstellen zu deren Webseiten) die Suche direkt auf unserer Webseite ermöglichen können.\\
+Wenn ein Nutzer ein attraktives Angebot für ein Verkehrsmittel oder eine Unterkunft gefunden hat, kann er dieses auf unserer Seite eintragen. Dieses Angebot ist dann sofort für jeden Teilnehmer einsehbar. Diese Angebote können dann in der Gruppe mittels der Kommentar-Funktion besprochen werden. Für das definitive Buchen der Reise bietet unsere Webseite keine Funktion an, dies geschieht weiterhin über die jeweiligen Anbieter.\\
+Da während der Reise oft kein Internet verfügbar ist, bieten wir eine Funktion an, mit welcher sich alle Informationen exportieren lassen und sie somit jederzeit auch offline zur Verfügung stehen.\\
+\\
+In den weiteren Kapiteln unseres Pflichtenheftes werden wir die genauen Funktionen unserer Webapplikation noch genauer erläutern.
+
 \chapter{Zielbestimmungen}\label{chp:DefinitionOfGoals}
 \section{Musskriterien}\label{sec:MustCriteria}
 In den folgenden Tabellen sind die Musskriterien des [Trip]od's definiert.
@@ -116,9 +129,11 @@ Die in diesem Kapitel definierten Abgrenzungskriterien sollen bewusst nicht erre
 \end{table}
 \chapter{Produkteinsatz}\label{chp:ProductApplication}
 \section{Anwendungsbereiche}\label{sec:FieldOfApplience}
-Genutzt wird die Applikation über das Web, welches die Zusammenarbeit von mehreren Personen an der gleichen Reise ermöglicht.
+Genutzt wird der Ferienplaner über das Web. Dies ermöglicht, dass mehrere Personen problemlos zusammen ihre Reise planen können.\\
+Theoretisch kann jeder Mensch, der Zugang zum Internet hat, unsere Applikation benutzen, jedoch ist vorerst nur eine deutsche Webseite geplant, sodass in einem ersten Schritt auf deutschsprachige Nutzer gezielt wird.
 \section{Benutzergruppen des Produktes}\label{sec:TargetAudience}
-Das Produkt gilt der öffentlichen, nicht-kommerziellen Nutzung und ist für Gruppen wie auch Einzelpersonen geeignet. Das umfasst Personen jeden Geschlechtes, Alters oder Region (Mehrsprachigkeit ist für die Seite vorerst jedoch nicht vorgesehen). Es sollen Personen mit Reiselust angesprochen werden, welche aber vielleicht kein grosses Budget zur Verfügung haben, wie Studenten. Das Programm soll auch eine Möglichkeit der Reiseplanung für Firmen oder Vereine darstellen.
+Das Produkt gilt der öffentlichen, nicht-kommerziellen Nutzung und ist für Gruppen wie auch Einzelpersonen geeignet. Dies umfasst Personen jeden Geschlechtes oder Alters. Ein wichtiger Punkt unserer Webseite ist auch das Budget, da gerade wir Studenten oftmals nicht über grosse, finanzielle Möglichkeiten verfügen. Somit ist unsere Applikation bestens geeignet für reiselustige Personen, welche gerne ihre Reise selber planen oder sich den Luxus eines Reisebüros nicht leisten können.
+
 \chapter{Funktionale Anforderungen}\label{chp:FunctionalRequirements}
 Der Ferienplaner ist über einen eigenen Account zu verwalten. Jeder Reisende braucht einen eigenen Account (Dummy-Accounts für Gruppen könnten eine Alternative sein). Mit diesem Account lassen sich neue Ferien anlegen, denen andere Accounts hinzugefügt werden können. Bei Gruppen ist der Gruppenersteller automatisch der Gruppenadmin. Ferien können nun terminlich eingeschränkt, Abreise- und Rückkehrdaten festgelegt und Reiseziele bestimmt werden. Weitere Einstellmöglichkeiten (Minimum-Budget, Maximum-Komfort, etc.) können ebenfalls bestimmt werden. All diese Parameter können vom Admin uneingeschränkt und von Gruppenmitgliedern nach Revision des Admins und anderer Gruppenmitglieder aufgenommen werden.\\
 Nun kann auf Knopfdruck die Berechnung gestartet werden. Dabei werden über die API's von mehreren Anbietern Angebote gesammelt und Rechnungen getätigt. Der Output soll aus den Kosten der Ideallösung (Auswahl der Möglichkeiten evtl. ebenfalls möglich), einer Tabelle der buchbaren Mittel und einem Zeitplan bestehen. Das effektive Buchen geht dann aus Sicherheitsgründen weiterhin händisch über den Admin.
