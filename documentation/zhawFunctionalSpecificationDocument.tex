@@ -169,16 +169,16 @@ Nun kann auf Knopfdruck die Berechnung gestartet werden. Dabei werden über die 
 \end{minipage}
 \chapter{Nicht-Funktionale Anforderungen}\label{chp:NonFunctionalRequirements}
 \begin{table}[ht]\centering
-\begin{tabular}{l|p{4cm}|p{8cm}}\hline
-\textbf{Kriterium} & \textbf{Kurzbeschrieb} & \textbf{Beschreibung}\\\hline
-\R{1000} & Gebrauchsfähigkeit (Usability) & Die Webseiten müssen durch den Benutzer, welcher dem Benutzerprofil entspricht, ohne weitere Hilfe verwendet werden können.\\
-\R{1010} & Fehlertoleranz & Hinweise und Fehlermeldungen müssen für den Benutzer verständlich formuliert sein und eine Hilfestellung zur Problemlösung beinhalten.\\
-\R{1020} & Sprache \& länderspezifische Einstellungen & Die Webseiten sind in deutscher Sprache (Schweiz) verfasst, verwenden den Zeichensatz UTF-8 und die Schweiz-spezifischen Einstellungen von Datum, Zeit, Zahlen und Währung.\\
-\R{1030} & Zielplattform (Server) & Die Web-Applikation muss als JavaServer-Pages auf dem zur Verfügung gestellten virtuellen Server unter Verwendung einer SQL-Datenbank mit Apache Tomcat betrieben werden.\\
-\R{1040} & Zielplattform (Client) & Die Webseiten werden in der aktuellsten freigegebenen Version des Mozilla Firefox und Google Chrome korrekt dargestellt.\\
-\R{1050} & Werkzeuge zur Entwicklung & Als Projektmanagement-Tool und zur Verwaltung des Sourcecode und der Dokumente muss der zur Verfügung gestellte github Server verwendet werden.\\
-\R{1060} & Robustheit & Auch nach einem Neustart des virtuellen Servers muss die Webseite voll funktionsfähig sein.\\
-\R{1070} & Testbarkeit & Für die Durchführung der Tests und der Abnahme müssen sinnvolle Testdaten in genügendem Umfang zur Verfügung gestellt werden.\\
+\begin{tabular}{l|p{3.0cm}|p{5cm}|p{2cm}|p{1.25cm}}\hline
+\textbf{Kriterium} & \textbf{Kurzbeschrieb} & \textbf{Beschreibung} &\textbf{Komplexität} & \textbf{Priorität}\\\hline
+\R{1000} & Gebrauchsfähigkeit (Usability) & Die Webseiten müssen durch den Benutzer, welcher dem Benutzerprofil entspricht, ohne weitere Hilfe verwendet werden können. & mittel & hoch\\
+\R{1010} & Fehlertoleranz & Hinweise und Fehlermeldungen müssen für den Benutzer verständlich formuliert sein und eine Hilfestellung zur Problemlösung beinhalten. & mittel & mittel\\
+\R{1020} & Sprache \& länderspezifische Einstellungen & Die Webseiten sind in deutscher Sprache (Schweiz) verfasst, verwenden den Zeichensatz UTF-8 und die Schweiz-spezifischen Einstellungen von Datum, Zeit, Zahlen und Währung. & tief & hoch\\
+\R{1030} & Zielplattform (Server) & Die Web-Applikation muss als JavaServer-Pages auf dem zur Verfügung gestellten virtuellen Server unter Verwendung einer SQL-Datenbank mit Apache Tomcat betrieben werden. & mittel & hoch\\
+\R{1040} & Zielplattform (Client) & Die Webseiten werden in der aktuellsten freigegebenen Version des Mozilla Firefox und Google Chrome korrekt dargestellt. & mittel & hoch\\
+\R{1050} & Werkzeuge zur Entwicklung & Als Projektmanagement-Tool und zur Verwaltung des Sourcecode und der Dokumente muss der zur Verfügung gestellte github Server verwendet werden. & tief & hoch\\
+\R{1060} & Robustheit & Auch nach einem Neustart des virtuellen Servers muss die Webseite voll funktionsfähig sein. & mittel & hoch\\
+\R{1070} & Testbarkeit & Für die Durchführung der Tests und der Abnahme müssen sinnvolle Testdaten in genügendem Umfang zur Verfügung gestellt werden. & hoch & hoch\\
 \end{tabular}
 \caption{Nicht-Funktionale Anforderungen}\label{tbl:NonFunctionalRequirements}
 \end{table}
