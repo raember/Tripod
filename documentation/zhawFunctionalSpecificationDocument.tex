@@ -74,8 +74,8 @@ Da während der Reise oft kein Internet verfügbar ist, bieten wir eine Funktion
 
 \chapter{Zielbestimmungen}\label{chp:DefinitionOfGoals}
 \section{Musskriterien}\label{sec:MustCriteria}
-
-In den folgenden Tabellen sind die Musskriterien des \gls{tripod}'s definiert.
+Die Applikation muss Accounts verwalten können. Dafür ist das Anlegen des Accounts und das An- und Abmelden unabdingbar. Darüber hinaus muss es möglich sein, den eigenen Account zu bearbeiten: Passwort, Name und weitere persönliche Daten soll der Benutzer ändern können. Falls das Passwort vergessen wird, soll eine Funktion zur Passwort-Rücksetzung angeboten werden.\\
+Ein Account muss Ferien anlegen können und weitere Personen zu diesen Ferien hinzufügen können. Es müssen Reisedaten bearbeitbar sein. Weiter soll man ein Budget festlegen, Destinationen hinzufügen, bearbeiten und entfernen können. Selbiges muss für Verkehrsmittel und Unterkünfte gelten. Alle Einträge müssen kommentierbar sein und alle relevanten Daten müssen exportierbar sein.
 \begin{table}[ht]\centering
 \begin{tabular}{l}\hline
 \tableheader{1}{Account verwalten}\\[0.3em]\hline
@@ -105,7 +105,8 @@ Offline-Export\\\hline
 \caption{Musskriterien Ferien}\label{tbl:MustVacation}
 \end{table}\newpage
 \section{Wunschkriterien}\label{sec:WishCriteria}
-Um den Funktionsumfang bei verbleibender Zeit zu erweitern, wurden die in der folgenden Tabelle stehenden Wunschkriterien definiert.
+Um den Funktionsumfang bei verbleibender Zeit zu erweitern, wurden entsprechende Wunschkriterien definiert.\\
+Es wäre wünschenswert, Dokumente anhängen zu können(Bsp. Booking-Bestätigungen o.Ä.). Es soll auch das Hinzufügen von mehreren Destinationen möglich sein. Die Abfrage von Flugdaten oder Unterkünften automatisiert anzubieten wäre ebenfalls erstrebsam.
 \begin{table}[ht]\centering
 \begin{tabular}{l}\hline
 \tableheader{1}{Ferien verwalten}\\[0.3em]\hline
@@ -118,7 +119,8 @@ API-basierte Unterkunftssuche\\\hline
 \caption{Wunschkriterien Ferien}\label{tbl:WishVacation}
 \end{table}
 \section{Abgrenzungskriterien}\label{sec:DistinctionCriteria}
-Die in diesem Kapitel definierten Abgrenzungskriterien sollen bewusst nicht erreicht werden.
+Die in diesem Kapitel definierten Abgrenzungskriterien sollen bewusst nicht erreicht werden.\\
+Das tatsächliche Booking von Käufen oder Buchungen sind nicht zu unterstützen, da dies Verantwortungen auflädt, welche nicht getragen werden sollen.
 \begin{table}[ht]\centering
 \begin{tabular}{l|p{2.5cm}|p{5cm}|p{2cm}|p{1.5cm}}\hline
 \tableheader{5}{Allgemein}\\[0.3em]\hline
@@ -139,7 +141,7 @@ Der Ferienplaner ist über einen eigenen Account zu verwalten. Jeder Reisende br
 Nun kann auf Knopfdruck die Berechnung gestartet werden. Dabei werden über die API's von mehreren Anbietern Angebote gesammelt und Rechnungen getätigt. Der Output soll aus den Kosten der Ideallösung (Auswahl der Möglichkeiten evtl. ebenfalls möglich), einer Tabelle der buchbaren Mittel und einem Zeitplan bestehen. Das effektive Buchen geht dann aus Sicherheitsgründen weiterhin händisch über den Admin.
 
 \begin{table}[ht]\centering
-\begin{tabular}{l|p{2.5cm}|p{5cm}|p{2cm}|p{1.5cm}}\hline
+\begin{longtable}{l|p{2.5cm}|p{5cm}|p{2cm}|p{1.5cm}}\hline
 \tableheader{5}{Account verwalten}\\[0.3em]\hline
 \textbf{Kriterium} & \textbf{Kurzbeschrieb} & \textbf{Beschreibung} & \textbf{Komplexität} & \textbf{Priorität}\\\hline
 \F{1000} & Account anlegen & Es kann ein Account mit den folgenden Daten angelegt werden:\linebreak
@@ -154,12 +156,12 @@ Nun kann auf Knopfdruck die Berechnung gestartet werden. Dabei werden über die 
 \F{1020} & Benutzer anmelden & Ein Benutzer kann sich mit seinem Account (E-Mail und Passwort) anmelden. & mittel & hoch\\\hline
 \F{1030} & Benutzer abmelden & Ein Benutzer kann sich, wenn er angemeldet ist, auch wieder abmelden. & tief & hoch\\\hline
 \F{1040} & Passwort vergessen & Wenn ein Benutzer sein Passwort vergessen hat, kann er mittels Eingabe seiner E-Mail Adresse ein neues Passwort anfordern. & tief & hoch\\\hline
-\end{tabular}
+\end{longtable}
 \caption{Funktionale Anforderungen Account}\label{tbl:FuncAccount}
 \end{table}
 
-\begin{table}[ht]\centering
-\begin{tabular}{l|p{2.5cm}|p{5cm}|p{2cm}|p{1.5cm}}\hline
+\begin{center}
+\begin{longtable}{l|p{2.5cm}|p{5cm}|p{2cm}|p{1.5cm}}\hline
 \tableheader{5}{Ferien verwalten}\\[0.3em]\hline
 \textbf{Kriterium} & \textbf{Kurzbeschrieb} & \textbf{Beschreibung} & \textbf{Komplexität} & \textbf{Priorität}\\\hline
 \F{2000} & Ferien anlegen & Jeder Benutzer kann Ferien erstellen. Eine Ferienplanung beinhaltet folgende Informationen:\linebreak
@@ -200,9 +202,9 @@ Nun kann auf Knopfdruck die Berechnung gestartet werden. Dabei werden über die 
 \W{2010} & Mehrere Destinationen & Es soll möglich sein, eine Planung für mehrere Destinationen hintereinander zu machen. & hoch & tief\\\hline
 \W{2020} & API-basierte Flugsuche & Es soll möglich sein, Flugangebote über eine API abzurufen. z.B. Google Flights & hoch & tief\\\hline
 \W{2030} & API-basierte Unterkunftssuche & Es soll möglich sein, Unterkünfte über eine API abzurufen. z.B. Booking.com & hoch & tief\\\hline
-\end{tabular}
 \caption{Funktionale Anforderungen Ferien}\label{tbl:FuncVacation}
-\end{table}\newpage
+\end{longtable}
+\end{center}\newpage
 
 \chapter{Funktionsbaum}\label{chp:FunctionTree}
 \begin{minipage}{\textwidth}
