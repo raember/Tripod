@@ -83,6 +83,7 @@ In den folgenden Tabellen sind die Musskriterien des \gls{tripod}'s definiert.
 Account anlegen\\\hline
 Account bearbeiten (Passwort ändern, persönliche Daten ausfüllen)\\\hline
 Benutzer an- und abmelden\\\hline
+Passwort vergessen\\\hline
 \end{tabular}
 \caption{Musskriterien Account}\label{tbl:MustAccount}
 \end{table}
@@ -141,10 +142,18 @@ Nun kann auf Knopfdruck die Berechnung gestartet werden. Dabei werden über die 
 \begin{tabular}{l|p{2.5cm}|p{5cm}|p{2cm}|p{1.5cm}}\hline
 \tableheader{5}{Account verwalten}\\[0.3em]\hline
 \textbf{Kriterium} & \textbf{Kurzbeschrieb} & \textbf{Beschreibung} & \textbf{Komplexität} & \textbf{Priorität}\\\hline
-\F{1000} & Account anlegen & Es kann ein Account mit E-Mail, Passwort und persönlichen Daten erstellt werden. & mittel & hoch\\\hline
-\F{1010} & Account bearbeiten & Das Passwort und die persönlichen Daten können angepasst werden. & tief & hoch\\\hline
+\F{1000} & Account anlegen & Es kann ein Account mit den folgenden Daten angelegt werden:\linebreak
+\begin{itemize}
+\item E-Mail Adresse [zwingend]
+\item Passwort [zwingend]
+\item Name (Vor- und Nachname) [zwingend]
+\item Telefonnummer [fakultativ]
+\end{itemize}
+& mittel & hoch\\\hline
+\F{1010} & Account bearbeiten & Das Passwort und die persönlichen Daten können angepasst werden. Einzig die E-Mail Adresse kann nicht verändert werden. & tief & hoch\\\hline
 \F{1020} & Benutzer anmelden & Ein Benutzer kann sich mit seinem Account (E-Mail und Passwort) anmelden. & mittel & hoch\\\hline
 \F{1030} & Benutzer abmelden & Ein Benutzer kann sich, wenn er angemeldet ist, auch wieder abmelden. & tief & hoch\\\hline
+\F{1040} & Passwort vergessen & Wenn ein Benutzer sein Passwort vergessen hat, kann er mittels Eingabe seiner E-Mail Adresse ein neues Passwort anfordern. & tief & hoch\\\hline
 \end{tabular}
 \caption{Funktionale Anforderungen Account}\label{tbl:FuncAccount}
 \end{table}
@@ -153,22 +162,40 @@ Nun kann auf Knopfdruck die Berechnung gestartet werden. Dabei werden über die 
 \begin{tabular}{l|p{2.5cm}|p{5cm}|p{2cm}|p{1.5cm}}\hline
 \tableheader{5}{Ferien verwalten}\\[0.3em]\hline
 \textbf{Kriterium} & \textbf{Kurzbeschrieb} & \textbf{Beschreibung} & \textbf{Komplexität} & \textbf{Priorität}\\\hline
-\F{2000} & Ferien anlegen & Jede Person kann Ferien erstellen. & tief & hoch\\\hline
-\F{2010} & Personen hinzufügen & Jede Person kann zusätzliche Personen hinzufügen. & tief & hoch\\\hline
-\F{2020} & Personen entfernen & Jede Person kann sich oder andere Personen entfernen. & tief & hoch\\\hline
-\F{2030} & Reisedaten festlegen & Der Zeitraum der Ferien kann festgelegt werden. & tief & hoch\\\hline
-\F{2040} & Budget festlegen & Das Budget muss festgelegt werden. Dieses besteht aus den Kosten der Reise und der Unterkunft. & tief & hoch\\\hline
-\F{2050} & Destination hinzufügen & Jede Person kann eine Destination hinzufügen. & tief & hoch\\\hline
-\F{2060} & Destination bearbeiten & Jede Person kann eine Destination bearbeiten. & tief & hoch\\\hline
-\F{2070} & Destination entfernen & Jede Person kann eine Destination entfernen. & tief & hoch\\\hline
-\F{2080} & Verkehrsmittel hinzufügen & Jede Person kann ein Verkehrsmittel hinzufügen. Hierzu kann ein Link des jeweiligen Angebotes hinterlegt werden. & tief & hoch\\\hline
-\F{2090} & Verkehrsmittel bearbeiten & Jede Person kann ein Verkehrsmittel bearbeiten. & tief & hoch\\\hline
-\F{2100} & Verkehrsmittel entfernen & Jede Person kann ein Verkehrsmittel entfernen. & tief & hoch\\\hline
-\F{2110} & Unterkunft hinzufügen & Jede Person kann eine Unterkunft hinzufügen. Hierzu kann ein Link des jeweiligen Angebotes hinterlegt werden. & tief & hoch\\\hline
-\F{2120} & Unterkunft bearbeiten & Jede Person kann eine Unterkunft bearbeiten. & tief & hoch\\\hline
-\F{2130} & Unterkunft entfernen & Jede Person kann eine Unterkunft entfernen. & tief & hoch\\\hline
-\F{2140} & Kommentar-Funktion & Jede Person kann Kommentare hinterlassen (Chat). & mittel & hoch\\\hline
-\F{2150} & Offline-Export & Jede Person kann einen Export mit den wichtigsten Daten der Ferien herunterladen. & mittel & hoch\\\hline
+\F{2000} & Ferien anlegen & Jeder Benutzer kann Ferien erstellen. Eine Ferienplanung beinhaltet folgende Informationen:\linebreak
+\begin{itemize}
+\item Titel [zwingend]
+\item Beschreibung [zwingend]
+\item Ersteller [zwingend]
+\item Personen [fakultativ, kann auch nur der "Ersteller" sein]
+\item Reisedaten (An- und Abreisedatum) [zwingend]
+\item Budget [fakultativ]
+\item Destinationen [mindestens Eine]
+\item Verkehrsmittel [fakultativ]
+\item Unterkünfte [fakultativ]
+\item Kommentare [fakultativ]
+\end{itemize}
+& tief & hoch\\\hline
+\F{2010} & Personen hinzufügen & Jeder Benutzer kann zusätzliche Personen per E-Mail Adresse zur Ferienplanung hinzufügen. & tief & hoch\\\hline
+\F{2020} & Personen entfernen & Jeder Benutzer kann sich oder andere Personen entfernen. & tief & hoch\\\hline
+\F{2030} & Reisedaten festlegen & Der Zeitraum der Ferien kann festgelegt und verändert werden. & tief & hoch\\\hline
+\F{2040} & Budget festlegen & Das Budget kann festgelegt und verändert werden. Dieses besteht aus:
+\begin{itemize}
+\item Budget für die Reise
+\item Budget für die Unterkunft
+\end{itemize}
+& tief & hoch\\\hline
+\F{2050} & Destination hinzufügen & Jeder Benutzer kann eine Destination hinzufügen. & tief & hoch\\\hline
+\F{2060} & Destination bearbeiten & Jeder Benutzer kann eine Destination bearbeiten. & tief & hoch\\\hline
+\F{2070} & Destination entfernen & Jeder Benutzer kann eine Destination entfernen. & tief & hoch\\\hline
+\F{2080} & Verkehrsmittel hinzufügen & Jeder Benutzer kann ein Verkehrsmittel hinzufügen. Hierzu kann ein Link des jeweiligen Angebotes hinterlegt werden. & tief & hoch\\\hline
+\F{2090} & Verkehrsmittel bearbeiten & Jeder Benutzer kann ein Verkehrsmittel bearbeiten. & tief & hoch\\\hline
+\F{2100} & Verkehrsmittel entfernen & Jeder Benutzer kann ein Verkehrsmittel entfernen. & tief & hoch\\\hline
+\F{2110} & Unterkunft hinzufügen & Jeder Benutzer kann eine Unterkunft hinzufügen. Hierzu kann ein Link des jeweiligen Angebotes hinterlegt werden. & tief & hoch\\\hline
+\F{2120} & Unterkunft bearbeiten & Jeder Benutzer kann eine Unterkunft bearbeiten. & tief & hoch\\\hline
+\F{2130} & Unterkunft entfernen & Jeder Benutzer kann eine Unterkunft entfernen. & tief & hoch\\\hline
+\F{2140} & Kommentar-Funktion & Jeder Benutzer kann Kommentare hinterlassen (Chat). & mittel & hoch\\\hline
+\F{2150} & Offline-Export & Jeder Benutzer kann einen Export mit den wichtigsten Daten der Ferien herunterladen. & mittel & hoch\\\hline
 \W{2000} & Dokumente anhängen & Booking-Bestätigungen und ähnliche Dokumente sollen abgelegt werden können. & hoch & tief\\\hline
 \W{2010} & Mehrere Destinationen & Es soll möglich sein, eine Planung für mehrere Destinationen hintereinander zu machen. & hoch & tief\\\hline
 \W{2020} & API-basierte Flugsuche & Es soll möglich sein, Flugangebote über eine API abzurufen. z.B. Google Flights & hoch & tief\\\hline
