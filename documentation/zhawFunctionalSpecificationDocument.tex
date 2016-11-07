@@ -28,6 +28,9 @@
 \newcommand{\F}[1]{
 \AddRequirement{F1.}{#1}
 }
+\newcommand{\A}[1]{
+\AddRequirement{A.}{#1}
+}
 \newcommand{\W}[1]{
 \AddRequirement{F2.}{#1}
 }
@@ -159,7 +162,9 @@ Das Produkt gilt der öffentlichen, nicht-kommerziellen Nutzung und ist für Gru
 
 \chapter{Funktionale Anforderungen}\label{chp:FunctionalRequirements}
 Der Ferienplaner ist über einen eigenen Account zu verwalten. Jeder Reisende braucht einen eigenen Account (Dummy-Accounts für Gruppen könnten eine Alternative sein). Mit diesem Account lassen sich neue Ferien anlegen, denen andere Accounts hinzugefügt werden können. Bei Gruppen ist der Gruppenersteller automatisch der Gruppenadmin. Ferien können nun terminlich eingeschränkt, Abreise- und Rückkehrdaten festgelegt und Reiseziele bestimmt werden. Weitere Einstellmöglichkeiten (Minimum-Budget, Maximum-Komfort, etc.) können ebenfalls bestimmt werden. All diese Parameter können vom Admin uneingeschränkt und von Gruppenmitgliedern nach Revision des Admins und anderer Gruppenmitglieder aufgenommen werden.\\
-Nun kann auf Knopfdruck die Berechnung gestartet werden. Dabei werden über die API's von mehreren Anbietern Angebote gesammelt und Rechnungen getätigt. Der Output soll aus den Kosten der Ideallösung (Auswahl der Möglichkeiten evtl. ebenfalls möglich), einer Tabelle der buchbaren Mittel und einem Zeitplan bestehen. Das effektive Buchen geht dann aus Sicherheitsgründen weiterhin händisch über den Admin.
+Nun kann auf Knopfdruck die Berechnung gestartet werden. Dabei werden über die API's von mehreren Anbietern Angebote gesammelt und Rechnungen getätigt. Der Output soll aus den Kosten der Ideallösung (Auswahl der Möglichkeiten evtl. ebenfalls möglich), einer Tabelle der buchbaren Mittel und einem Zeitplan bestehen. Das effektive Buchen geht dann aus Sicherheitsgründen weiterhin händisch über den Admin.\\
+F1: Funktionale Anforderungen\\
+A: Akzeptanzkriterien\\
 
 \begin{table}[ht]\centering
 \begin{longtable}{l|p{2.5cm}|p{5cm}|p{2cm}|p{1.5cm}}\hline
@@ -209,70 +214,69 @@ Wenn eine E-Mail Adresse eingegeben wird, welche einem Account zugeordnet werden
 \item Kommentare [fakultativ]
 \end{itemize}
 & tief & hoch\\\hline
-Akzeptanzkriterium \F{2000}:\linebreak
-Die Ferienplanung kann dann erstellt werden, wenn die gemäss in der Beschreibung beschriebenen, zwingenden Felder ausgefüllt wurden.\\\hline
+\A{2000}&\multicolumn{4}{p{10cm}|}{Die Ferienplanung kann dann erstellt werden, wenn die gemäss in der Beschreibung beschriebenen, zwingenden Felder ausgefüllt wurden.}\\\hline
 \F{2010} & Personen hinzufügen & Jeder Benutzer kann zusätzliche Personen (registrierte Benutzer) per E-Mail Adresse zur Ferienplanung hinzufügen. Die hinzugefügte Person wird mittels E-Mail über die neu verfügbare Ferienplanug informiert. & tief & hoch\\\hline
-Akzeptanzkriterium \F{2010}:\linebreak
-Eine Person kann zur Ferienplanung hinzugefügt werden, wenn ein Account mit der angegebenen E-Mail Adresse existiert. Die hinzugefügte Person soll mittels einer E-Mail darüber informiert werden.\\\hline
+\A{2010}&\multicolumn{4}{p{10cm}|}{
+Eine Person kann zur Ferienplanung hinzugefügt werden, wenn ein Account mit der angegebenen E-Mail Adresse existiert. Die hinzugefügte Person soll mittels einer E-Mail darüber informiert werden.}\\\hline
 \F{2020} & Personen entfernen & Jeder Benutzer kann sich oder andere Personen (registrierte Benutzer) entfernen. Die entfernte Person wird mittels E-Mail über den Ausschluss aus der Ferienplanung informiert. & tief & hoch\\\hline
-Akzeptanzkriterium \F{2020}:\linebreak
-Eine Person kann von der Ferienplanung entfernt werden, wenn sie einmal hinzugefügt wurde. Jeder Benutzer kann jede Person (inklusive sich selbst) aus der Ferienplanung entfernen.\\\hline
+\A{2020}&\multicolumn{4}{p{10cm}|}{
+Eine Person kann von der Ferienplanung entfernt werden, wenn sie einmal hinzugefügt wurde. Jeder Benutzer kann jede Person (inklusive sich selbst) aus der Ferienplanung entfernen.}\\\hline
 \F{2030} & Reisedaten festlegen & Der Zeitraum der Ferien kann festgelegt und verändert werden. & tief & hoch\\\hline
-Akzeptanzkriterium \F{2030}:\linebreak
-Die Reisedaten sollen mittels einem Date-Picker ausgewählt werden und im entsprechenden Format auch in der Datenbank abgelegt werden. Es kann kein Datum von Hand eingegeben werden, um die Konsistenz der Daten zu gewährleisten.\\\hline
+\A{2030}&\multicolumn{4}{p{10cm}|}{
+Die Reisedaten sollen mittels einem Date-Picker ausgewählt werden und im entsprechenden Format auch in der Datenbank abgelegt werden. Es kann kein Datum von Hand eingegeben werden, um die Konsistenz der Daten zu gewährleisten.}\\\hline
 \F{2040} & Budget festlegen & Das Budget kann festgelegt und verändert werden. Dieses besteht aus:
 \begin{itemize}
 \item Budget für die Reise
 \item Budget für die Unterkunft
 \end{itemize}
 & tief & hoch\\\hline
-Akzeptanzkriterium \F{2040}:\linebreak
-Das Budget für die Reise sowie für die Unterkunft soll in einem Feld definiert werden, welches nur Zahlen akzeptiert. Eine Währung soll aktuell nicht spezifiert werden, sie ist standardmässig CHF.\\\hline
+\A{2040}&\multicolumn{4}{p{10cm}|}{
+Das Budget für die Reise sowie für die Unterkunft soll in einem Feld definiert werden, welches nur Zahlen akzeptiert. Eine Währung soll aktuell nicht spezifiert werden, sie ist standardmässig CHF.}\\\hline
 \F{2050} & Destination hinzufügen & Jeder Benutzer kann eine Destination hinzufügen. & tief & hoch\\\hline
-Akzeptanzkriterium \F{2050}:\linebreak
-Eine Destination kann von Hand hinzugefügt werden. Sie kann aus einer vorgegebenen Liste ausgewählt oder manuell eingetragen werden. Die Eingabe darf nicht leer sein.\\\hline
+\A{2050}&\multicolumn{4}{p{10cm}|}{
+Eine Destination kann von Hand hinzugefügt werden. Sie kann aus einer vorgegebenen Liste ausgewählt oder manuell eingetragen werden. Die Eingabe darf nicht leer sein.}\\\hline
 \F{2060} & Destination bearbeiten & Jeder Benutzer kann eine Destination bearbeiten. & tief & hoch\\\hline
-Akzeptanzkriterium \F{2060}:\linebreak
-Eine Destination kann durch das Auswählen eines anderen Eintrages aus der Vorgabeliste oder durch eine manuelle Eingabe bearbeitet werden.\\\hline
+\A{2060}&\multicolumn{4}{p{10cm}|}{
+Eine Destination kann durch das Auswählen eines anderen Eintrages aus der Vorgabeliste oder durch eine manuelle Eingabe bearbeitet werden.}\\\hline
 \F{2070} & Destination entfernen & Jeder Benutzer kann eine Destination entfernen. & tief & hoch\\\hline
-Akzeptanzkriterium \F{2070}:\linebreak
-Eine Destination kann entfernt werden, insofern es nicht die einzige definiert Destination in der Ferienplanung ist. Es muss immer mindestens ein Destinationseintrag pro Ferienplanung existieren.\\\hline
+\A{2070}&\multicolumn{4}{p{10cm}|}{
+Eine Destination kann entfernt werden, insofern es nicht die einzige definiert Destination in der Ferienplanung ist. Es muss immer mindestens ein Destinationseintrag pro Ferienplanung existieren.}\\\hline
 \F{2080} & Verkehrsmittel hinzufügen & Jeder Benutzer kann ein Verkehrsmittel hinzufügen. Hierzu kann ein Link des jeweiligen Angebotes hinterlegt werden. & tief & hoch\\\hline
-Akzeptanzkriterium \F{2080}:\linebreak
-Jeder Benutzer einer Ferienplanung kann ein neues Verkehrsmittel hinzufügen. Dabei muss die Art des Verkehrsmittel aus einer vorgegebenen Liste ausgewählt werden, zusätzlich kann noch der Link eines dazugehörigen Angebotes oder eine Beschreibung hinterlegt werden. Es können auch mehrere Verkehrsmittel derselben Art in einer Ferienplanung erstellt werden.\\\hline
+\A{2080}&\multicolumn{4}{p{10cm}|}{
+Jeder Benutzer einer Ferienplanung kann ein neues Verkehrsmittel hinzufügen. Dabei muss die Art des Verkehrsmittel aus einer vorgegebenen Liste ausgewählt werden, zusätzlich kann noch der Link eines dazugehörigen Angebotes oder eine Beschreibung hinterlegt werden. Es können auch mehrere Verkehrsmittel derselben Art in einer Ferienplanung erstellt werden.}\\\hline
 \F{2090} & Verkehrsmittel bearbeiten & Jeder Benutzer kann ein Verkehrsmittel bearbeiten. & tief & hoch\\\hline
-Akzeptanzkriterium \F{2090}:\linebreak
-Die erfassten Verkehrsmittel können bearbeitet werden, indem eine andere Art des Verkehrsmittel ausgewählt wurde, oder der Link respektive die Beschreibung angepasst wurde.\\\hline
+\A{2090}&\multicolumn{4}{p{10cm}|}{
+Die erfassten Verkehrsmittel können bearbeitet werden, indem eine andere Art des Verkehrsmittel ausgewählt wurde, oder der Link respektive die Beschreibung angepasst wurde.}\\\hline
 \F{2100} & Verkehrsmittel entfernen & Jeder Benutzer kann ein Verkehrsmittel entfernen. & tief & hoch\\\hline
-Akzeptanzkriterium \F{2100}:\linebreak
-Ein Verkehrsmittel kann jederzeit entfernt werden. Es gibt keine Mindestanzahl an Verkehrsmitteln in einer Ferienplanung.\\\hline
+\A{2100}&\multicolumn{4}{p{10cm}|}{
+Ein Verkehrsmittel kann jederzeit entfernt werden. Es gibt keine Mindestanzahl an Verkehrsmitteln in einer Ferienplanung.}\\\hline
 \F{2110} & Unterkunft hinzufügen & Jeder Benutzer kann eine Unterkunft hinzufügen. Hierzu kann ein Link des jeweiligen Angebotes hinterlegt werden. & tief & hoch\\\hline
-Akzeptanzkriterium \F{2110}:\linebreak
-Jeder Benutzer einer Ferienplanung kann eine neue Unterkunft hinzufügen. Dabei muss die Art der Unterkunft aus einer vorgegebenen Liste ausgewählt werden, zusätzlich kann noch der Link eines dazugehörigen Angebotes oder eine Beschreibung hinterlegt werden. Es können auch mehrere Unterkünfte derselben Art in einer Ferienplanung erstellt werden.\\\hline
+\A{2110}&\multicolumn{4}{p{10cm}|}{
+Jeder Benutzer einer Ferienplanung kann eine neue Unterkunft hinzufügen. Dabei muss die Art der Unterkunft aus einer vorgegebenen Liste ausgewählt werden, zusätzlich kann noch der Link eines dazugehörigen Angebotes oder eine Beschreibung hinterlegt werden. Es können auch mehrere Unterkünfte derselben Art in einer Ferienplanung erstellt werden.}\\\hline
 \F{2120} & Unterkunft bearbeiten & Jeder Benutzer kann eine Unterkunft bearbeiten. & tief & hoch\\\hline
-Akzeptanzkriterium \F{2120}:\linebreak
-Die erfassten Unterkünfte können bearbeitet werden, indem eine andere Art der Unterkunft ausgewählt wurde, oder der Link respektive die Beschreibung angepasst wurde.\\\hline
+\A{2120}&\multicolumn{4}{p{10cm}|}{
+Die erfassten Unterkünfte können bearbeitet werden, indem eine andere Art der Unterkunft ausgewählt wurde, oder der Link respektive die Beschreibung angepasst wurde.}\\\hline
 \F{2130} & Unterkunft entfernen & Jeder Benutzer kann eine Unterkunft entfernen. & tief & hoch\\\hline
-Akzeptanzkriterium \F{2130}:\linebreak
-Eine Unterkunft kann jederzeit entfernt werden. Es gibt keine Mindestanzahl an Unterkünften in einer Ferienplanung.\\\hline
+\A{2130}&\multicolumn{4}{p{10cm}|}{
+Eine Unterkunft kann jederzeit entfernt werden. Es gibt keine Mindestanzahl an Unterkünften in einer Ferienplanung.}\\\hline
 \F{2140} & Kommentar-Funktion & Jeder Benutzer kann Kommentare hinterlassen (Chat). & mittel & hoch\\\hline
-Akzeptanzkriterium \F{2140}:\linebreak
-Die Eingabe eines Kommentares, erfolgt über ein Textfeld und sie darf nicht leer sein.\\\hline
+\A{2140}&\multicolumn{4}{p{10cm}|}{
+Die Eingabe eines Kommentares, erfolgt über ein Textfeld und sie darf nicht leer sein.}\\\hline
 \F{2150} & Offline-Export & Jeder Benutzer kann einen Export mit den wichtigsten Daten der Ferien herunterladen. & mittel & hoch\\\hline
-Akzeptanzkriterium \F{2150}:\linebreak
-Alle relevanten Daten der Ferienplanung sollen in einem angemessenen und klar strukturierten Export (z.B. csv) heruntergeladen werden können.\\\hline
+\A{2150}&\multicolumn{4}{p{10cm}|}{
+Alle relevanten Daten der Ferienplanung sollen in einem angemessenen und klar strukturierten Export (z.B. csv) heruntergeladen werden können.}\\\hline
 \W{2000} & Dokumente anhängen & Booking-Bestätigungen und ähnliche Dokumente sollen abgelegt werden können. & hoch & tief\\\hline
-Akzeptanzkriterium \W{2000}:\linebreak
-Es sollen Dokumente, egal welches Datenformates in einer Ferienplanung abgelegt werden können. Diese sollen für alle Benutzer einer Ferienplanung verfügbar sein.\\\hline
+\A{2000}&\multicolumn{4}{p{10cm}|}{
+Es sollen Dokumente, egal welches Datenformates in einer Ferienplanung abgelegt werden können. Diese sollen für alle Benutzer einer Ferienplanung verfügbar sein.}\\\hline
 \W{2010} & Mehrere Destinationen & Es soll möglich sein, eine Planung für mehrere Destinationen hintereinander zu machen. & hoch & tief\\\hline
-Akzeptanzkriterium \W{2010}:\linebreak
-Wenn mehrere Destinationen aneinander gehängt werden, darf jeder Destinationseintrag nur einmal verwendet werden. Das heisst man muss für jeden Zwischenstopp eine eigene Destination gemäss Vorgaben erstellen.\\\hline
+\A{2010}&\multicolumn{4}{p{10cm}|}{
+Wenn mehrere Destinationen aneinander gehängt werden, darf jeder Destinationseintrag nur einmal verwendet werden. Das heisst man muss für jeden Zwischenstopp eine eigene Destination gemäss Vorgaben erstellen.}\\\hline
 \W{2020} & API-basierte Flugsuche & Es soll möglich sein, Flugangebote über eine API abzurufen. z.B. Google Flights & hoch & tief\\\hline
-Akzeptanzkriterium \W{2020}:\linebreak
-Durch einen Button-Klick soll die automatisierte Flugsuche gestartet werden. Die verschiedenen Parameter dazu werden aus der Ferienplanung ausgelesen. Danach werden die Einträge in eine separate Liste abgefüllt. Es wird die Anzahl Einträge angezeigt, sowie jeder Eintrag ist ein Link zu einem passenden Angebot.\\\hline
+\A{2020}&\multicolumn{4}{p{10cm}|}{
+Durch einen Button-Klick soll die automatisierte Flugsuche gestartet werden. Die verschiedenen Parameter dazu werden aus der Ferienplanung ausgelesen. Danach werden die Einträge in eine separate Liste abgefüllt. Es wird die Anzahl Einträge angezeigt, sowie jeder Eintrag ist ein Link zu einem passenden Angebot.}\\\hline
 \W{2030} & API-basierte Unterkunftssuche & Es soll möglich sein, Unterkünfte über eine API abzurufen. z.B. Booking.com & hoch & tief\\\hline
-Akzeptanzkriterium \W{2030}:\linebreak
-Durch einen Button-Klick soll die automatisierte Unterkunftssuche gestartet werden. Die verschiedenen Parameter dazu werden aus der Ferienplanung ausgelesen. Danach werden die Einträge in eine separate Liste abgefüllt. Es wird die Anzahl Einträge angezeigt, sowie jeder Eintrag ist ein Link zu einem passenden Angebot.\\\hline
+\A{2030}&\multicolumn{4}{p{10cm}|}{
+Durch einen Button-Klick soll die automatisierte Unterkunftssuche gestartet werden. Die verschiedenen Parameter dazu werden aus der Ferienplanung ausgelesen. Danach werden die Einträge in eine separate Liste abgefüllt. Es wird die Anzahl Einträge angezeigt, sowie jeder Eintrag ist ein Link zu einem passenden Angebot.}\\\hline
 \caption{Funktionale Anforderungen Ferien}\label{tbl:FuncVacation}
 \end{longtable}
 \end{center}\newpage
