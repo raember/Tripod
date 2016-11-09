@@ -72,7 +72,7 @@ Der Nutzer kann sich auf der Webseite registrieren und sich einloggen. Anschlies
 Nun informiert sich jeder Teilnehmer über mögliche Verkehrsmittel, um zu der gewünschten Destination zu gelangen und über mögliche Unterkünfte. Diese Suche findet ausserhalb unserer Webseite statt. Ein Wunschziel von uns ist es, dass wir über verschiedene \gls{api}'s der Anbieter (Schnittstellen zu deren Webseiten) die Suche direkt auf unserer Webseite ermöglichen können.\\
 Wenn ein Nutzer ein attraktives Angebot für ein Verkehrsmittel oder eine Unterkunft gefunden hat, kann er dieses auf unserer Seite eintragen. Dieses Angebot ist dann für jeden Teilnehmer einsehbar. Diese Angebote können dann in der Gruppe mittels der Kommentar-Funktion besprochen werden. Für das definitive Buchen der Reise bietet unsere Webseite keine Funktion an. Dies geschieht weiterhin über die jeweiligen Anbieter.\\
 Da während der Reise oft kein Internet verfügbar ist, bieten wir eine Funktion an, mit welcher sich alle Informationen exportieren lassen und sie somit jederzeit auch offline zur Verfügung stehen.
-
+\cite{ProjectIdee}
 \newpage
 \section{Visualisierungsideen}\label{sec:Visualisierungsideen}
 Zur Visualisierung der Applikation haben wir noch ein Wireframe, sowie einige Sketches verschiedener Applikationsseiten erstellt. Diese dienen  als ersten Entwurf. Die endgültige Version kann davon abweichen.
@@ -178,20 +178,15 @@ A: Akzeptanzkriterien\\
 \item Telefonnummer [fakultativ]
 \end{itemize}
 & mittel & hoch\\\hline
-Akzeptanzkriterium \F{1000}:\linebreak
-Ein Account kann nur erstellt werden, wenn die noch kein anderer Account mit der angegebenen E-Mail Adresse existiert. Die E-Mail Adresse muss dem E-Mail Format ensprechen und das Passwort muss eine gewisse Sicherheit bieten (Buchstaben, Ziffern sowie Sonderzeichen).\\\hline
+\A{1000}&\multicolumn{4}{p{10cm}|}{Ein Account kann nur erstellt werden, wenn die noch kein anderer Account mit der angegebenen E-Mail Adresse existiert. Die E-Mail Adresse muss dem E-Mail Format ensprechen und das Passwort muss eine gewisse Sicherheit bieten (Buchstaben, Ziffern sowie Sonderzeichen).}\\\hline
 \F{1010} & Account bearbeiten & Das Passwort und die persönlichen Daten können angepasst werden. Einzig die E-Mail Adresse kann nicht verändert werden. & tief & hoch\\\hline
-Akzeptanzkriterium \F{1010}:\linebreak
-Es können alle Daten bis auf die E-Mail Adresse nach Belieben angepasst werden. Die Änderungen werden sofort übernommen und sind mit dem Abspeichern aktiv. Das Passwort muss weiterhin den Sicherheitsrichtlinien entsprechen.\\\hline
+\A{1010}&\multicolumn{4}{p{10cm}|}{Es können alle Daten bis auf die E-Mail Adresse nach Belieben angepasst werden. Die Änderungen werden sofort übernommen und sind mit dem Abspeichern aktiv. Das Passwort muss weiterhin den Sicherheitsrichtlinien entsprechen.}\\\hline
 \F{1020} & Benutzer anmelden & Ein Benutzer kann sich mit seinem Account (E-Mail und Passwort) anmelden. & mittel & hoch\\\hline
-Akzeptanzkriterium \F{1020}:\linebreak
-Die Anmeldung erfolgt über die Eingabe der korrekten Kombination aus E-Mail Adresse und Passwort.\\\hline
+\A{1020}&\multicolumn{4}{p{10cm}|}{Die Anmeldung erfolgt über die Eingabe der korrekten Kombination aus E-Mail Adresse und Passwort.}\\\hline
 \F{1030} & Benutzer abmelden & Ein Benutzer kann sich, wenn er angemeldet ist, auch wieder abmelden. & tief & hoch\\\hline
-Akzeptanzkriterium \F{1030}:\linebreak
-Damit sich ein Benutzer abmelden kann, muss er sich zuvor angemeldet haben und immer noch angemeldet sein.\\\hline
+\A{1030}&\multicolumn{4}{p{10cm}|}{Damit sich ein Benutzer abmelden kann, muss er sich zuvor angemeldet haben und immer noch angemeldet sein.}\\\hline
 \F{1040} & Passwort wiederherstellen & Wenn ein Benutzer sein Passwort vergessen hat, kann er mittels Eingabe seiner E-Mail Adresse ein neues Passwort anfordern. & tief & hoch\\\hline
-Akzeptanzkriterium \F{1040}:\linebreak
-Wenn eine E-Mail Adresse eingegeben wird, welche einem Account zugeordnet werden kann, wird das Passwort zurückgesetzt und ein neues Passwort wird an die angegebene E-Mail Adresse versandt.\\\hline
+\A{1040}&\multicolumn{4}{p{10cm}|}{Wenn eine E-Mail Adresse eingegeben wird, welche einem Account zugeordnet werden kann, wird das Passwort zurückgesetzt und ein neues Passwort wird an die angegebene E-Mail Adresse versandt..}\\\hline
 \end{longtable}
 \caption{Funktionale Anforderungen Account}\label{tbl:FuncAccount}
 \end{table}
@@ -297,7 +292,6 @@ Durch einen Button-Klick soll die automatisierte Unterkunftssuche gestartet werd
 \R{1050} & Werkzeuge zur Entwicklung & Als Projektmanagement-Tool und zur Verwaltung des Sourcecode und der Dokumente muss der zur Verfügung gestellte github Server verwendet werden. & tief & hoch\\
 \R{1060} & Robustheit & Auch nach einem Neustart des virtuellen Servers muss die Webseite voll funktionsfähig sein. & mittel & hoch\\
 \R{1070} & Testbarkeit & Für die Durchführung der Tests und der Abnahme müssen sinnvolle Testdaten in genügendem Umfang zur Verfügung gestellt werden. & hoch & hoch\\
-\R{1080} & Design & Das Design der Webseite soll modern und intuitiv sein. & mittel & hoch
 \end{tabular}
 \caption{Nicht-Funktionale Anforderungen}\label{tbl:NonFunctionalRequirements}
 \end{table}
